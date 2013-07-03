@@ -1,0 +1,4 @@
+_apnet_demo:
+    resource: "@ApnetDemoBundle/Controller/DemoController.php"
+    type:     annotation
+    prefix:   /apnet
