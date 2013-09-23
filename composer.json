@@ -20,8 +20,17 @@
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0"
         ,
-        "twitter/bootstrap": "~2.3"
+        "apnet/layout-bundle": "~1.0"
     },
+    "require-dev": {
+        "covex-nn/phpqatools": "~1.0"
+    },
+    "repositories" : [
+        {
+            "type" : "composer",
+            "url" : "http://packagist.apnet.ru/"
+        }
+    ],
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -40,6 +49,8 @@
     },
     "config": {
         "bin-dir": "bin"
+        ,
+        "component-dir": "web/components"
     },
     "minimum-stability": "stable",
     "extra": {

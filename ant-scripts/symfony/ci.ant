@@ -1,76 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <property file="${lib.path.symfony}/ci.properties" />
-  
-  <macrodef name="app-console">
-    <attribute name="dir" default="${basedir}" />
-    <attribute name="command" />
-    <attribute name="env" default="${symfony.env}" />
-    <attribute name="failonerror" default="true" />
-    
-    <element name="args" optional="true" />
-    
-    <sequential>
-      <exec executable="php" dir="@{dir}" failonerror="@{failonerror}">
-        <arg value="app/console" />
-        <arg value="@{command}" />
-        <arg value="--env=@{env}" />
-        <args />
-      </exec>
-    </sequential>
-  </macrodef>
-  
-  <target name="symfony-deploy-parameters">
-    <fail unless="mysql.host">Property 'mysql.host' must be set</fail>
-    <fail unless="mysql.schema">Property 'mysql.schema' must be set</fail>
-    <fail unless="mysql.user">Property 'mysql.user' must be set</fail>
-    <fail unless="mysql.password">Property 'mysql.password' must be set</fail>
-    
-    <concat destfile="${basedir}/app/config/parameters.yml">
-      <fileset dir="${basedir}/app/config" includes="parameters_default.yml" />
-    </concat>
-    
-   	<replaceregexp match="%DATABASE_HOST%" replace="${mysql.host}" flags="g" file="${basedir}/app/config/parameters.yml" />
-   	<replaceregexp match="%DATABASE_SCHEMA%" replace="${mysql.schema}" flags="g" file="${basedir}/app/config/parameters.yml" />
-   	<replaceregexp match="%DATABASE_USER%" replace="${mysql.user}" flags="g" file="${basedir}/app/config/parameters.yml" />
-   	<replaceregexp match="%DATABASE_PASSWORD%" replace="${mysql.password}" flags="g" file="${basedir}/app/config/parameters.yml" />
-  </target>
-  
-  <target name="symfony-deploy-chmod">
-    <chmod perm="777" type="both">
-      <fileset dir="${basedir}/app/cache">
-        <include name="**/*"/>
-      </fileset>
-      <dirset dir="${basedir}/app/cache">
-        <include name="**/*"/>
-      </dirset>
-      <fileset dir="${basedir}/app/logs">
-        <include name="**/*"/>
-      </fileset>
-      <dirset dir="${basedir}/app/logs">
-        <include name="**/*"/>
-      </dirset>
-    </chmod>
-  </target>
-  
-  <target name="symfony-database-create" depends="symfony-deploy-parameters">
-    <app-console command="doctrine:database:create" failonerror="false" />
-  </target>
-  
-  <target name="CI-deploy-symfony" depends="symfony-deploy-parameters" description="Run deploy scripts">
-    <delete includeemptydirs="true" quiet="true">
-      <fileset dir="${basedir}/app/cache/${symfony.env}">
-        <include name="**"/>        
-      </fileset>
-    </delete>
-    
-    <app-console command="cache:warmup" />
-    <app-console command="doctrine:schema:update">
-      <args>
-        <arg value="--force" />
-        <arg value="--no-interaction" />
-      </args>
-    </app-console>
-    <app-console command="assetic:dump" />
-  </target>
+    <property file="${lib.path.symfony}/ci.properties" />
+
+    <macrodef name="app-console">
+        <attribute name="dir" default="${basedir}" />
+        <attribute name="command" />
+        <attribute name="env" default="${symfony.env}" />
+        <attribute name="failonerror" default="true" />
+
+        <element name="args" optional="true" />
+
+        <sequential>
+            <exec executable="php" dir="@{dir}" failonerror="@{failonerror}">
+                <arg value="app/console" />
+                <arg value="@{command}" />
+                <arg value="--env=@{env}" />
+                <args />
+            </exec>
+        </sequential>
+    </macrodef>
+
+    <target name="symfony-deploy-parameters">
+        <fail unless="mysql.host">Property 'mysql.host' must be set</fail>
+        <fail unless="mysql.schema">Property 'mysql.schema' must be set</fail>
+        <fail unless="mysql.user">Property 'mysql.user' must be set</fail>
+        <fail unless="mysql.password">Property 'mysql.password' must be set</fail>
+
+        <concat destfile="${basedir}/app/config/parameters.yml">
+            <fileset dir="${basedir}/app/config" includes="parameters_default.yml" />
+        </concat>
+
+        <replaceregexp match="%DATABASE_HOST%" replace="${mysql.host}" flags="g" file="${basedir}/app/config/parameters.yml" />
+        <replaceregexp match="%DATABASE_SCHEMA%" replace="${mysql.schema}" flags="g" file="${basedir}/app/config/parameters.yml" />
+        <replaceregexp match="%DATABASE_USER%" replace="${mysql.user}" flags="g" file="${basedir}/app/config/parameters.yml" />
+        <replaceregexp match="%DATABASE_PASSWORD%" replace="${mysql.password}" flags="g" file="${basedir}/app/config/parameters.yml" />
+    </target>
+
+    <target name="symfony-deploy-chmod">
+        <chmod perm="777" type="both">
+            <fileset dir="${basedir}/app/cache">
+                <include name="**/*"/>
+            </fileset>
+            <dirset dir="${basedir}/app/cache">
+                <include name="**/*"/>
+            </dirset>
+            <fileset dir="${basedir}/app/logs">
+                <include name="**/*"/>
+            </fileset>
+            <dirset dir="${basedir}/app/logs">
+                <include name="**/*"/>
+            </dirset>
+        </chmod>
+    </target>
+
+    <target name="symfony-database-create" depends="symfony-deploy-parameters">
+        <app-console command="doctrine:database:create" failonerror="false" />
+    </target>
+
+    <target name="CI-deploy-symfony" depends="symfony-deploy-parameters" description="Run deploy scripts">
+        <delete includeemptydirs="true" quiet="true">
+            <fileset dir="${basedir}/app/cache/${symfony.env}">
+                <include name="**"/>
+            </fileset>
+        </delete>
+<!--
+        <app-console command="doctrine:schema:update">
+            <args>
+--><!--                <arg value="- -force" />
+--><!--                 <arg value="- -no-interaction" />
+            </args>
+        </app-console>
+        <app-console command="doctrine:migrations:status" />
+        <app-console command="doctrine:migrations:migrate">
+            <args>
+--><!--                <arg value="- -no-interaction" />
+            </args>
+        </app-console>
+-->
+        <app-console command="assetic:dump" />
+        <app-console command="assets:install">
+            <args>
+                <arg value="web" />
+            </args>
+        </app-console>
+        <app-console command="cache:warmup" />
+    </target>
 </project>
