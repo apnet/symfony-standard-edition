@@ -37,19 +37,16 @@
     </target>
 
     <target name="symfony-deploy-chmod">
+        <chmod perm="777" dir="${basedir}/app/cache" />
+        <chmod perm="777" dir="${basedir}/app/logs" />
+
         <chmod perm="777" type="both">
             <fileset dir="${basedir}/app/cache">
                 <include name="**/*"/>
             </fileset>
-            <dirset dir="${basedir}/app/cache">
-                <include name="**/*"/>
-            </dirset>
             <fileset dir="${basedir}/app/logs">
                 <include name="**/*"/>
             </fileset>
-            <dirset dir="${basedir}/app/logs">
-                <include name="**/*"/>
-            </dirset>
         </chmod>
     </target>
 
