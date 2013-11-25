@@ -10,7 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class DemoController extends Controller
 {
   /**
-   * @Route("/", name="_apnet_demo_index")
+   * @Route("/")
    * @Template()
    */
   public function indexAction()

@@ -1,1 +1,0 @@
-ant-scriptsapp/config/parameters_default.yml.gitignore  /composer.lock  /build.local.properties  *~  /.idea/workspace.xml  /.idea/tasks.xmlapnet.txtbuild.local.propertiesbuild.xmlphpcs.xmlphpdox.xmlphpmd.xmlphpunit.xml.dist[-] app/phpunit.xml.dist

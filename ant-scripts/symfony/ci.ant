@@ -30,10 +30,12 @@
             <fileset dir="${basedir}/app/config" includes="parameters_default.yml" />
         </concat>
 
-        <replaceregexp match="%DATABASE_HOST%" replace="${mysql.host}" flags="g" file="${basedir}/app/config/parameters.yml" />
-        <replaceregexp match="%DATABASE_SCHEMA%" replace="${mysql.schema}" flags="g" file="${basedir}/app/config/parameters.yml" />
-        <replaceregexp match="%DATABASE_USER%" replace="${mysql.user}" flags="g" file="${basedir}/app/config/parameters.yml" />
-        <replaceregexp match="%DATABASE_PASSWORD%" replace="${mysql.password}" flags="g" file="${basedir}/app/config/parameters.yml" />
+        <replace file="${basedir}/app/config/parameters.yml">
+            <replacefilter token="%DATABASE_HOST%" value="${mysql.host}" />
+            <replacefilter token="%DATABASE_SCHEMA%" value="${mysql.schema}" />
+            <replacefilter token="%DATABASE_USER%" value="${mysql.user}" />
+            <replacefilter token="%DATABASE_PASSWORD%" value="${mysql.password}" />
+        </replace>
     </target>
 
     <target name="symfony-deploy-chmod">
@@ -50,36 +52,35 @@
         </chmod>
     </target>
 
-    <target name="symfony-database-create" depends="symfony-deploy-parameters">
-        <app-console command="doctrine:database:create" failonerror="false" />
-    </target>
-
     <target name="CI-deploy-symfony" depends="symfony-deploy-parameters" description="Run deploy scripts">
         <delete includeemptydirs="true" quiet="true">
             <fileset dir="${basedir}/app/cache/${symfony.env}">
                 <include name="**"/>
             </fileset>
+            <fileset dir="${basedir}/app/cache/${symfony.env}_old">
+                <include name="**"/>
+            </fileset>
         </delete>
-<!--
+
+        <app-console command="cache:warmup" />
         <app-console command="doctrine:schema:update">
             <args>
---><!--                <arg value="- -force" />
---><!--                 <arg value="- -no-interaction" />
+                <arg value="--force" />
+                <arg value="--no-interaction" />
             </args>
         </app-console>
         <app-console command="doctrine:migrations:status" />
         <app-console command="doctrine:migrations:migrate">
             <args>
---><!--                <arg value="- -no-interaction" />
+                <arg value="--no-interaction" />
             </args>
         </app-console>
--->
         <app-console command="assetic:dump" />
         <app-console command="assets:install">
             <args>
+                <arg value="--symlink" />
                 <arg value="web" />
             </args>
         </app-console>
-        <app-console command="cache:warmup" />
     </target>
 </project>

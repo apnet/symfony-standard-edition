@@ -1,2 +1,0 @@
-_apnet:
-    resource: "@ApnetDemoBundle/Resources/config/routing.yml"
