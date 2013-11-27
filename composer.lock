@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "05bdaa9854168d44865db78c8727e0ae",
+    "hash": "af82d2324ac747a4232de70ad61873a0",
     "packages": [
         {
             "name": "apnet/layout-bundle",
@@ -2223,6 +2223,44 @@
     ],
     "packages-dev": [
         {
+            "name": "apnet/coding-standard",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/apnet/coding-standard.git",
+                "reference": "ea47722dbdfb6d0ede93d8e580d4889518909d19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/apnet/coding-standard/zipball/ea47722dbdfb6d0ede93d8e580d4889518909d19",
+                "reference": "ea47722dbdfb6d0ede93d8e580d4889518909d19",
+                "shasum": ""
+            },
+            "require": {
+                "squizlabs/php_codesniffer": "~1.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Apnet_": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Apnet PHP coding standard",
+            "time": "2013-11-27 20:06:51"
+        },
+        {
             "name": "cilex/cilex",
             "version": "1.0.1",
             "source": {
@@ -2388,16 +2426,16 @@
         },
         {
             "name": "covex-nn/phpqatools",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/covex-nn/phpqatools.git",
-                "reference": "f27809fcde10a00d55fb52aefe4fd65603aa763a"
+                "reference": "5df7598b6b8766fedde82fd19f90894e41c99521"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/covex-nn/phpqatools/zipball/f27809fcde10a00d55fb52aefe4fd65603aa763a",
-                "reference": "f27809fcde10a00d55fb52aefe4fd65603aa763a",
+                "url": "https://api.github.com/repos/covex-nn/phpqatools/zipball/5df7598b6b8766fedde82fd19f90894e41c99521",
+                "reference": "5df7598b6b8766fedde82fd19f90894e41c99521",
                 "shasum": ""
             },
             "require": {
@@ -2409,7 +2447,10 @@
                 "phpmd/phpmd": "1.5.0",
                 "phpunit/phpunit": "3.7.28",
                 "sebastian/phpcpd": "2.0.0",
-                "squizlabs/php_codesniffer": "1.4.7"
+                "squizlabs/php_codesniffer": "1.4.8"
+            },
+            "suggest": {
+                "apnet/coding-standard": "Apnet PHP coding standard"
             },
             "type": "library",
             "extra": {
@@ -2419,8 +2460,7 @@
             },
             "autoload": {
                 "psr-0": {
-                    "JooS\\Jenkins\\": "src/",
-                    "Apnet_": "src/"
+                    "JooS\\Jenkins\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2428,7 +2468,7 @@
                 "MIT"
             ],
             "description": "Composer package for PHP QA Tools",
-            "time": "2013-11-12 22:17:52"
+            "time": "2013-11-27 20:18:51"
         },
         {
             "name": "dflydev/markdown",
@@ -3995,16 +4035,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "1.4.7",
+            "version": "1.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "df764a1604607ea61c4eeea5410666e27cb37a8b"
+                "reference": "d26daa8096ad2c8758677f0352597f8cda4722e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/df764a1604607ea61c4eeea5410666e27cb37a8b",
-                "reference": "df764a1604607ea61c4eeea5410666e27cb37a8b",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/d26daa8096ad2c8758677f0352597f8cda4722e0",
+                "reference": "d26daa8096ad2c8758677f0352597f8cda4722e0",
                 "shasum": ""
             },
             "require": {
@@ -4062,7 +4102,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2013-09-26 00:08:21"
+            "time": "2013-11-25 22:07:04"
         },
         {
             "name": "theseer/fdomdocument",
