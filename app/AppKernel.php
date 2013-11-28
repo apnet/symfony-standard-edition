@@ -24,12 +24,18 @@ class AppKernel extends Kernel
             new Apnet\LayoutBundle\ApnetLayoutBundle(),
         );
 
-        if (in_array($this->getEnvironment(), array('dev', 'test'))) {
-            // $bundles[] = new Acme\DemoBundle\AcmeDemoBundle();
-            $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
-            $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
-            $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
-            $bundles[] = new Apnet\DemoBundle\ApnetDemoBundle();
+        switch ($this->getEnvironment()) {
+            case 'dev':
+                $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
+                $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
+                $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+                $bundles[] = new Apnet\DemoBundle\ApnetDemoBundle();
+
+                break;
+            case 'test':
+                $bundles[] = new Apnet\FunctionalTestBundle\ApnetFunctionalTestBundle();
+
+                break;
         }
 
         return $bundles;

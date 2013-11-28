@@ -1,16 +1,7 @@
 imports:
-    - { resource: config_dev.yml }
+    - { resource: config.yml }
+    - { resource: "@ApnetFunctionalTestBundle/Resources/config/config_test.yml" }
 
 framework:
-    test: ~
-    session:
-        storage_id: session.storage.mock_file
-    profiler:
-        collect: false
-
-web_profiler:
-    toolbar: false
-    intercept_redirects: false
-
-swiftmailer:
-    disable_delivery: true
+    router:
+        resource: "%kernel.root_dir%/config/routing_test.yml"
