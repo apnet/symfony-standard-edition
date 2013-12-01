@@ -2262,16 +2262,16 @@
         },
         {
             "name": "apnet/functional-test-bundle",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/apnet/FunctionalTestBundle.git",
-                "reference": "114f9f8f633f2191c67ec4268a5d0cbfce6c9c88"
+                "reference": "77ea04a39edf13243d78e59cabbd2593a2cbff9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apnet/FunctionalTestBundle/zipball/114f9f8f633f2191c67ec4268a5d0cbfce6c9c88",
-                "reference": "114f9f8f633f2191c67ec4268a5d0cbfce6c9c88",
+                "url": "https://api.github.com/repos/apnet/FunctionalTestBundle/zipball/77ea04a39edf13243d78e59cabbd2593a2cbff9c",
+                "reference": "77ea04a39edf13243d78e59cabbd2593a2cbff9c",
                 "shasum": ""
             },
             "require": {
@@ -2303,7 +2303,7 @@
                 "MIT"
             ],
             "description": "Apnet Functional test bundle",
-            "time": "2013-12-01 19:34:51"
+            "time": "2013-12-01 20:41:21"
         },
         {
             "name": "cilex/cilex",
