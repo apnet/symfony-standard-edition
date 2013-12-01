@@ -2262,27 +2262,30 @@
         },
         {
             "name": "apnet/functional-test-bundle",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/apnet/FunctionalTestBundle.git",
-                "reference": "d1f77c82ab89dff492af3b5e484131dc978e0e3d"
+                "reference": "114f9f8f633f2191c67ec4268a5d0cbfce6c9c88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apnet/FunctionalTestBundle/zipball/d1f77c82ab89dff492af3b5e484131dc978e0e3d",
-                "reference": "d1f77c82ab89dff492af3b5e484131dc978e0e3d",
+                "url": "https://api.github.com/repos/apnet/FunctionalTestBundle/zipball/114f9f8f633f2191c67ec4268a5d0cbfce6c9c88",
+                "reference": "114f9f8f633f2191c67ec4268a5d0cbfce6c9c88",
                 "shasum": ""
             },
             "require": {
+                "covex-nn/joos-stream": "~4.1",
                 "doctrine/doctrine-fixtures-bundle": "~2.2",
-                "doctrine/orm": ">=2.2.3,<2.4-dev",
                 "symfony/browser-kit": "~2.3",
                 "symfony/framework-bundle": "~2.3"
             },
             "require-dev": {
                 "apnet/coding-standard": "~1.0",
-                "covex-nn/phpqatools": "~1.3"
+                "covex-nn/phpqatools": "~1.3",
+                "doctrine/orm": ">=2.2.3,<2.4-dev",
+                "symfony/monolog-bundle": "~2.3",
+                "symfony/swiftmailer-bundle": "~2.3"
             },
             "type": "library",
             "extra": {
@@ -2300,7 +2303,7 @@
                 "MIT"
             ],
             "description": "Apnet Functional test bundle",
-            "time": "2013-11-28 20:45:05"
+            "time": "2013-12-01 19:34:51"
         },
         {
             "name": "cilex/cilex",
@@ -2419,6 +2422,59 @@
                 "silex"
             ],
             "time": "2012-12-19 10:50:58"
+        },
+        {
+            "name": "covex-nn/joos-stream",
+            "version": "4.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/covex-nn/JooS_Stream.git",
+                "reference": "e9841b804190a9f624b9e44caa0af7a18f3816d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/covex-nn/JooS_Stream/zipball/e9841b804190a9f624b9e44caa0af7a18f3816d1",
+                "reference": "e9841b804190a9f624b9e44caa0af7a18f3816d1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "apnet/coding-standard": "~1.0",
+                "covex-nn/phpqatools": "~1.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "JooS\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey F. Mindubaev",
+                    "email": "covex.mobile@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP stream wrapper, transactional virtual file system",
+            "keywords": [
+                "mock file system",
+                "phpunit",
+                "streaming",
+                "testing",
+                "wrapper"
+            ],
+            "time": "2013-11-29 21:29:15"
         },
         {
             "name": "covex-nn/phpcb",
