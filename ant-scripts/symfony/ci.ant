@@ -45,9 +45,11 @@
         <chmod perm="777" type="both">
             <fileset dir="${basedir}/app/cache">
                 <include name="**/*"/>
+                <exclude name=".gitkeep" />
             </fileset>
             <fileset dir="${basedir}/app/logs">
                 <include name="**/*"/>
+                <exclude name=".gitkeep" />
             </fileset>
         </chmod>
     </target>
