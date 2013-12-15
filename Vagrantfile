@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.network :private_network, ip: "127.0.0.2"
   config.vm.network "forwarded_port", guest: 80, host: 8080
-  config.vm.hostname = "cq5.local"
+  config.vm.hostname = "www.local"
 
   config.vm.provision "shell", path: "vagrant/provision.sh"
 end
