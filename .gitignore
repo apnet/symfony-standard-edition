@@ -9,3 +9,9 @@
 /vendor/
 /bin/
 /composer.phar
+/build.local.properties
+*~
+/.idea
+/.vagrant
+/web/components
+/phpunit.xml
