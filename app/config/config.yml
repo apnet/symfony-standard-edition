@@ -60,6 +60,8 @@ assetic:
             jar: %kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar
         yui_js:
             jar: %kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar
+        scss:
+            apply_to: "\.scss$"
 
 # Doctrine Configuration
 doctrine:
