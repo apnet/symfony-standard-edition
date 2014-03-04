@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "a592255b772ca733df21fbabf10ab327",
+    "hash": "a994e6ea250b04c223b3b03701eab8db",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -41,17 +41,17 @@
         },
         {
             "name": "apnet/layout-bundle",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "target-dir": "Apnet/LayoutBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/apnet/LayoutBundle.git",
-                "reference": "df8b055abaedd4a25c3701a543bb7ea1c72c3574"
+                "reference": "928b9189028d9ed7d19965965e1cb20f61083dd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apnet/LayoutBundle/zipball/df8b055abaedd4a25c3701a543bb7ea1c72c3574",
-                "reference": "df8b055abaedd4a25c3701a543bb7ea1c72c3574",
+                "url": "https://api.github.com/repos/apnet/LayoutBundle/zipball/928b9189028d9ed7d19965965e1cb20f61083dd5",
+                "reference": "928b9189028d9ed7d19965965e1cb20f61083dd5",
                 "shasum": ""
             },
             "require": {
@@ -59,7 +59,7 @@
                 "components/bootstrap": "3.0.3",
                 "components/jquery": "1.11.0",
                 "php": ">=5.3.3",
-                "symfony/framework-bundle": "~2.3.0"
+                "symfony/framework-bundle": "~2.0,>=2.3.0"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -74,7 +74,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Default layout for all sites",
-            "time": "2014-02-19 08:24:27"
+            "time": "2014-02-19 10:38:18"
         },
         {
             "name": "components/bootstrap",
@@ -895,12 +895,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/migrations.git",
-                "reference": "0742fc7167a4deedaabc8639849a3e71082999f1"
+                "reference": "4837b4afac4469c8740f33eae6bdcd8bd1545d2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/migrations/zipball/0742fc7167a4deedaabc8639849a3e71082999f1",
-                "reference": "0742fc7167a4deedaabc8639849a3e71082999f1",
+                "url": "https://api.github.com/repos/doctrine/migrations/zipball/4837b4afac4469c8740f33eae6bdcd8bd1545d2e",
+                "reference": "4837b4afac4469c8740f33eae6bdcd8bd1545d2e",
                 "shasum": ""
             },
             "require": {
@@ -947,7 +947,7 @@
                 "database",
                 "migrations"
             ],
-            "time": "2014-01-20 11:29:43"
+            "time": "2014-03-04 01:42:11"
         },
         {
             "name": "doctrine/orm",
@@ -2070,16 +2070,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.3.10",
+            "version": "v2.3.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "e4b9ff28b7c357971947ed12f99fbc68ff116830"
+                "reference": "aa5b228e87dde1a1a9c7c3c78ad538739da05fe1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/e4b9ff28b7c357971947ed12f99fbc68ff116830",
-                "reference": "e4b9ff28b7c357971947ed12f99fbc68ff116830",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/aa5b228e87dde1a1a9c7c3c78ad538739da05fe1",
+                "reference": "aa5b228e87dde1a1a9c7c3c78ad538739da05fe1",
                 "shasum": ""
             },
             "require": {
@@ -2176,7 +2176,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-02-12 08:18:23"
+            "time": "2014-02-27 14:55:30"
         },
         {
             "name": "twig/extensions",
@@ -2976,16 +2976,16 @@
         },
         {
             "name": "phpdocumentor/graphviz",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/GraphViz.git",
-                "reference": "24e7d2f285a5972dbdce6a36f26d499b144eb1b1"
+                "reference": "13595130b9bc185109f40f1b70f0b231f490f5fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/GraphViz/zipball/24e7d2f285a5972dbdce6a36f26d499b144eb1b1",
-                "reference": "24e7d2f285a5972dbdce6a36f26d499b144eb1b1",
+                "url": "https://api.github.com/repos/phpDocumentor/GraphViz/zipball/13595130b9bc185109f40f1b70f0b231f490f5fc",
+                "reference": "13595130b9bc185109f40f1b70f0b231f490f5fc",
                 "shasum": ""
             },
             "require": {
@@ -3013,7 +3013,7 @@
                     "email": "mike.vanriel@naenius.com"
                 }
             ],
-            "time": "2014-02-16 07:54:39"
+            "time": "2014-02-26 17:45:01"
         },
         {
             "name": "phpdocumentor/phpdocumentor",
@@ -3618,16 +3618,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "1.2.15",
+            "version": "1.2.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "6ba4ed2895d538a039d5d5866edc4ec0424c7852"
+                "reference": "69e55e68481cf708a6db43aff0b504e31402fe27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/6ba4ed2895d538a039d5d5866edc4ec0424c7852",
-                "reference": "6ba4ed2895d538a039d5d5866edc4ec0424c7852",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/69e55e68481cf708a6db43aff0b504e31402fe27",
+                "reference": "69e55e68481cf708a6db43aff0b504e31402fe27",
                 "shasum": ""
             },
             "require": {
@@ -3675,7 +3675,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-02-03 07:44:47"
+            "time": "2014-02-25 03:34:05"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -3812,16 +3812,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "5220af2a7929aa35cf663d97c89ad3d50cf5fa3e"
+                "reference": "ad4e1e23ae01b483c16f600ff1bebec184588e32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/5220af2a7929aa35cf663d97c89ad3d50cf5fa3e",
-                "reference": "5220af2a7929aa35cf663d97c89ad3d50cf5fa3e",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/ad4e1e23ae01b483c16f600ff1bebec184588e32",
+                "reference": "ad4e1e23ae01b483c16f600ff1bebec184588e32",
                 "shasum": ""
             },
             "require": {
@@ -3858,7 +3858,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2013-09-13 04:58:23"
+            "time": "2014-03-03 05:10:30"
         },
         {
             "name": "phpunit/phpunit",
