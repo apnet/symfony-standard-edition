@@ -46,28 +46,4 @@ class AppKernel extends Kernel
         $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getCacheDir()
-    {
-        if ($this->environment == 'dev') {
-            return '/dev/shm/symfony2/cache/' .  $this->environment;
-        }
-
-        return parent::getCacheDir();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getLogDir()
-    {
-        if ($this->environment == 'test') {
-            return '/dev/shm/symfony2/logs';
-        }
-
-        return parent::getLogDir();
-    }
-
 }
