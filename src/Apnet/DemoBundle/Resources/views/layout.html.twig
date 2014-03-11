@@ -2,7 +2,10 @@
 
 {% block stylesheets_core %}
     <link rel="stylesheet" href="{{ asset('components/bootstrap/css/bootstrap.min.css') }}"/>
-    {% stylesheets "@ApnetDemoBundle/Resources/public/sass/style.scss" %}
+    {% stylesheets filter="scss,cssrewrite"
+      "bundles/apnetdemo/sass/style.scss"
+      "bundles/apnetdemo/sass/block-social.scss"
+    %}
         <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
     <!--[if lt IE 9]><script type="text/javascript" src="{{ asset('components/html5shiv/dist/html5shiv.js') }}"></script><![endif]-->
