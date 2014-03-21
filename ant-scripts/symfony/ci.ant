@@ -77,12 +77,12 @@
                 <arg value="--no-interaction" />
             </args>
         </app-console>
-        <app-console command="assetic:dump" />
         <app-console command="assets:install">
             <args>
                 <arg value="--symlink" />
                 <arg value="web" />
             </args>
         </app-console>
+        <app-console command="assetic:dump" />
     </target>
 </project>
