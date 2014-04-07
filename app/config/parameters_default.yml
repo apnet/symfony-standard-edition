@@ -13,3 +13,5 @@ parameters:
 
     locale:            en
     secret:            1083dc7bfd20cc8c2bd10148631513ecf7
+
+    assetic_watcher_enabled: %ASSETIC_WATCHER_ENABLED%

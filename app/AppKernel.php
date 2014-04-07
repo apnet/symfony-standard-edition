@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new Apnet\LayoutBundle\ApnetLayoutBundle(),
+            new Apnet\AsseticImporterBundle\ApnetAsseticImporterBundle(),
         );
 
         switch ($this->getEnvironment()) {
@@ -29,7 +30,7 @@ class AppKernel extends Kernel
                 $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
                 $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
                 $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
-                $bundles[] = new Apnet\DemoBundle\ApnetDemoBundle();
+                $bundles[] = new Apnet\AsseticWatcherBundle\ApnetAsseticWatcherBundle();
 
                 break;
             case 'test':
