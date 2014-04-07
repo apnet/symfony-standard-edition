@@ -35,6 +35,7 @@
             <replacefilter token="%DATABASE_SCHEMA%" value="${mysql.schema}" />
             <replacefilter token="%DATABASE_USER%" value="${mysql.user}" />
             <replacefilter token="%DATABASE_PASSWORD%" value="${mysql.password}" />
+            <replacefilter token="%ASSETIC_WATCHER_ENABLED%" value="${assetic_watcher.enabled}" />
         </replace>
     </target>
 

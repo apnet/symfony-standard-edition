@@ -89,3 +89,11 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+apnet_assetic_importer:
+    assets:
+        main:
+            source: %kernel.root_dir%/Resources/assets/blueprint/config.rb
+            target: blueprint
+            importer: compass
+#            watcher: true

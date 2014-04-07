@@ -13,6 +13,4 @@
 *~
 /.idea
 /.vagrant
-/web/components
-/web/css
 /phpunit.xml

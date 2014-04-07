@@ -29,3 +29,7 @@ assetic:
 
 #swiftmailer:
 #    delivery_address: me@example.com
+
+apnet_assetic_watcher:
+    compiler_root: %kernel.root_dir%/../src
+    enabled: %assetic_watcher_enabled%
