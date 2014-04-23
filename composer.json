@@ -23,8 +23,7 @@
         "doctrine/migrations": "1.0.*@dev",
         "covex-nn/doctrine-migrations-bundle": "2.1.*@dev",
         "jms/security-extra-bundle": "~1.5",
-        "apnet/assetic-importer-bundle": "~1.0",
-        "apnet/layout-bundle": "~2.0"
+        "apnet/layout-bundle": "~3.0"
     },
     "require-dev": {
         "covex-nn/phpqatools": "~1.3",
