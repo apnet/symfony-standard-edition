@@ -82,6 +82,9 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
 
+doctrine_migrations:
+    use_bundles: true
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"

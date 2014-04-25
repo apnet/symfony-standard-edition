@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "c1c900a788e5fe291b3f2d1be0dd085b",
+    "hash": "c5421e35ef47445c4efd6237a33cb70b",
     "packages": [
         {
             "name": "apnet/assetic-importer-bundle",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/apnet/AsseticImporterBundle.git",
-                "reference": "15bdd541c6f8857af49578d895fabda661a81e46"
+                "reference": "0595b1f3f76f81e7e6dd7251d4c443644ef0916c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apnet/AsseticImporterBundle/zipball/15bdd541c6f8857af49578d895fabda661a81e46",
-                "reference": "15bdd541c6f8857af49578d895fabda661a81e46",
+                "url": "https://api.github.com/repos/apnet/AsseticImporterBundle/zipball/0595b1f3f76f81e7e6dd7251d4c443644ef0916c",
+                "reference": "0595b1f3f76f81e7e6dd7251d4c443644ef0916c",
                 "shasum": ""
             },
             "require": {
@@ -74,7 +74,7 @@
                 "sass",
                 "scss"
             ],
-            "time": "2014-04-20 22:44:08"
+            "time": "2014-04-25 14:32:37"
         },
         {
             "name": "apnet/bootstrap",
@@ -280,22 +280,22 @@
         },
         {
             "name": "covex-nn/doctrine-migrations-bundle",
-            "version": "dev-master",
+            "version": "0.9.1",
             "target-dir": "Doctrine/Bundle/MigrationsBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/covex-nn/DoctrineMigrationsBundle.git",
-                "reference": "40a8f87d3f2cc2e7d66cfe52eff7e8a519f4cd6c"
+                "reference": "bb908414a5b4cc3394516b3310030558043034ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/covex-nn/DoctrineMigrationsBundle/zipball/40a8f87d3f2cc2e7d66cfe52eff7e8a519f4cd6c",
-                "reference": "40a8f87d3f2cc2e7d66cfe52eff7e8a519f4cd6c",
+                "url": "https://api.github.com/repos/covex-nn/DoctrineMigrationsBundle/zipball/bb908414a5b4cc3394516b3310030558043034ed",
+                "reference": "bb908414a5b4cc3394516b3310030558043034ed",
                 "shasum": ""
             },
             "require": {
+                "covex-nn/migrations": "~0.9,<1.0",
                 "doctrine/doctrine-bundle": "~1.0",
-                "doctrine/migrations": "~1.0@dev",
                 "php": ">=5.3.2",
                 "symfony/framework-bundle": "~2.1"
             },
@@ -317,7 +317,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Symfony Community",
@@ -335,7 +337,67 @@
                 "migrations",
                 "schema"
             ],
-            "time": "2013-11-08 18:42:29"
+            "time": "2014-04-25 17:45:40"
+        },
+        {
+            "name": "covex-nn/migrations",
+            "version": "0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/covex-nn/migrations.git",
+                "reference": "87ffe6c68b4c0643c9587fcb75d8264d5dd7cfe2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/covex-nn/migrations/zipball/87ffe6c68b4c0643c9587fcb75d8264d5dd7cfe2",
+                "reference": "87ffe6c68b4c0643c9587fcb75d8264d5dd7cfe2",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "~2.0",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "symfony/console": "2.*",
+                "symfony/yaml": "2.*"
+            },
+            "suggest": {
+                "symfony/console": "to run the migration from the console"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\DBAL\\Migrations": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                }
+            ],
+            "description": "Database Schema migrations using Doctrine DBAL",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "migrations"
+            ],
+            "time": "2014-04-25 16:55:23"
         },
         {
             "name": "doctrine/annotations",
@@ -993,66 +1055,6 @@
             "time": "2013-01-12 18:59:04"
         },
         {
-            "name": "doctrine/migrations",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/migrations.git",
-                "reference": "46a031ddaea47d0685200027cfe8c83b02aee6f6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/migrations/zipball/46a031ddaea47d0685200027cfe8c83b02aee6f6",
-                "reference": "46a031ddaea47d0685200027cfe8c83b02aee6f6",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/dbal": "~2.0",
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "symfony/console": "2.*",
-                "symfony/yaml": "2.*"
-            },
-            "suggest": {
-                "symfony/console": "to run the migration from the console"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Doctrine\\DBAL\\Migrations": "lib"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL"
-            ],
-            "authors": [
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": "Creator"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                }
-            ],
-            "description": "Database Schema migrations using Doctrine DBAL",
-            "homepage": "http://www.doctrine-project.org",
-            "keywords": [
-                "database",
-                "migrations"
-            ],
-            "time": "2014-03-16 19:02:43"
-        },
-        {
             "name": "doctrine/orm",
             "version": "v2.4.2",
             "source": {
@@ -1566,16 +1568,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "1afc39690e7414412face1f8cbf67b73db34485c"
+                "reference": "65026b610f8c19e61d7242f600530677b0466aac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1afc39690e7414412face1f8cbf67b73db34485c",
-                "reference": "1afc39690e7414412face1f8cbf67b73db34485c",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/65026b610f8c19e61d7242f600530677b0466aac",
+                "reference": "65026b610f8c19e61d7242f600530677b0466aac",
                 "shasum": ""
             },
             "require": {
@@ -1630,7 +1632,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2014-04-20 16:41:26"
+            "time": "2014-04-24 13:29:03"
         },
         {
             "name": "phpoption/phpoption",
@@ -5213,10 +5215,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "doctrine/migrations": 20,
-        "covex-nn/doctrine-migrations-bundle": 20
-    },
+    "stability-flags": [
+
+    ],
     "platform": {
         "php": ">=5.3.3"
     },

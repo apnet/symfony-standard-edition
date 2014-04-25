@@ -2,7 +2,7 @@
 
 namespace Application\Migrations;
 
-use Apnet\Doctrine\AbstractMigration;
+use Doctrine\Bundle\MigrationsBundle\AbstractMigration;
 use Doctrine\DBAL\Schema\Schema;
 
 class Version20130101000000 extends AbstractMigration

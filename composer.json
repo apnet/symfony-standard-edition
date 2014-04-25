@@ -20,8 +20,7 @@
         "sensio/generator-bundle": "2.3.*"
         ,
         "doctrine/doctrine-fixtures-bundle": "~2.2",
-        "doctrine/migrations": "1.0.*@dev",
-        "covex-nn/doctrine-migrations-bundle": "2.1.*@dev",
+        "covex-nn/doctrine-migrations-bundle": "~0.9.1,<1.0",
         "jms/security-extra-bundle": "~1.5",
         "apnet/layout-bundle": "~3.0"
     },
