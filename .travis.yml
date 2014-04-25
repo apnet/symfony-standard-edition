@@ -14,4 +14,4 @@ before_script:
    - sh -c "if $TRAVIS_SECURE_ENV_VARS; then composer config --global github-oauth.github.com $GITHUB_OAUTH_TOKEN; fi"
 
 script:
-   - ant -Dmysql.schema=symfony2 -Dmysql.host=127.0.0.1 -Dmysql.user=travis -Dmysql.password=travis -Dmysql.root.user=root -Dmysql.root.password=
+   - ant -Dmysql.schema=symfony2 -Dmysql.host=127.0.0.1 -Dmysql.user=travis -Dmysql.password=travis -Dmysql.root.user=root -Dmysql.root.password= -Dsystem.composer=composer
