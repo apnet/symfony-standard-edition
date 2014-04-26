@@ -21,8 +21,8 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
-            new Apnet\LayoutBundle\ApnetLayoutBundle(),
             new Apnet\AsseticImporterBundle\ApnetAsseticImporterBundle(),
+            new Apnet\LayoutBundle\ApnetLayoutBundle(),
         );
 
         switch ($this->getEnvironment()) {

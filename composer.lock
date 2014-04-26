@@ -3,54 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "42a3001cff701113b8cd83a69b729c15",
+    "hash": "b17323b142832ffa2482611e09ad9142",
     "packages": [
         {
-            "name": "afarkas/html5shiv",
-            "version": "3.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aFarkas/html5shiv.git",
-                "reference": "a4d4dcbe0875ba10c4c56c54454ae93031d59584"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aFarkas/html5shiv/zipball/a4d4dcbe0875ba10c4c56c54454ae93031d59584",
-                "reference": "a4d4dcbe0875ba10c4c56c54454ae93031d59584",
-                "shasum": ""
-            },
-            "require": {
-                "robloach/component-installer": "*"
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "dist/html5shiv.js"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT",
-                "GPL-2.0"
-            ],
-            "description": "Defacto way to enable use of HTML5 sectioning elements in legacy Internet Explorer.",
-            "homepage": "http://paulirish.com/2011/the-history-of-the-html5-shiv/",
-            "time": "2013-09-23 07:20:29"
-        },
-        {
             "name": "apnet/assetic-importer-bundle",
-            "version": "1.0.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/apnet/AsseticImporterBundle.git",
-                "reference": "2d654697e10cf08c5d8948a55eb258ce938b704d"
+                "reference": "0595b1f3f76f81e7e6dd7251d4c443644ef0916c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apnet/AsseticImporterBundle/zipball/2d654697e10cf08c5d8948a55eb258ce938b704d",
-                "reference": "2d654697e10cf08c5d8948a55eb258ce938b704d",
+                "url": "https://api.github.com/repos/apnet/AsseticImporterBundle/zipball/0595b1f3f76f81e7e6dd7251d4c443644ef0916c",
+                "reference": "0595b1f3f76f81e7e6dd7251d4c443644ef0916c",
                 "shasum": ""
             },
             "require": {
@@ -63,6 +29,7 @@
                 "symfony/finder": "~2.3",
                 "symfony/http-kernel": "~2.3",
                 "symfony/process": "~2.3",
+                "symfony/yaml": "~2.3",
                 "twig/twig": "~1.12"
             },
             "require-dev": {
@@ -78,6 +45,11 @@
                 "symfony/event-dispatcher": "~2.3"
             },
             "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Apnet\\": "src/"
@@ -85,7 +57,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL3"
+                "MIT"
             ],
             "authors": [
                 {
@@ -102,129 +74,40 @@
                 "sass",
                 "scss"
             ],
-            "time": "2014-04-06 21:21:50"
+            "time": "2014-04-25 14:32:37"
         },
         {
-            "name": "apnet/layout-bundle",
-            "version": "2.0.2",
-            "target-dir": "Apnet/LayoutBundle",
+            "name": "apnet/bootstrap",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/apnet/LayoutBundle.git",
-                "reference": "928b9189028d9ed7d19965965e1cb20f61083dd5"
+                "url": "https://github.com/apnet/bootstrap.git",
+                "reference": "db80ea4137f064cda5bc81b67321dd6076ebe0c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apnet/LayoutBundle/zipball/928b9189028d9ed7d19965965e1cb20f61083dd5",
-                "reference": "928b9189028d9ed7d19965965e1cb20f61083dd5",
+                "url": "https://api.github.com/repos/apnet/bootstrap/zipball/db80ea4137f064cda5bc81b67321dd6076ebe0c4",
+                "reference": "db80ea4137f064cda5bc81b67321dd6076ebe0c4",
                 "shasum": ""
             },
             "require": {
-                "afarkas/html5shiv": "3.7.0",
-                "components/bootstrap": "3.0.3",
-                "components/jquery": "1.11.0",
-                "php": ">=5.3.3",
-                "symfony/framework-bundle": "~2.0,>=2.3.0"
+                "apnet/assetic-importer-bundle": "~1.1",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "apnet/coding-standard": "~1.0",
+                "apnet/functional-test-bundle": "~1.1,>=1.1.3",
+                "apnet/jquery": "~1.11,<2.0",
+                "knplabs/knp-markdown-bundle": "~1.3",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~1.5",
+                "symfony/monolog-bundle": "~2.3",
+                "symfony/symfony": "~2.3"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Apnet\\LayoutBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "description": "Default layout for all sites",
-            "time": "2014-02-19 10:38:18"
-        },
-        {
-            "name": "components/bootstrap",
-            "version": "3.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/components/bootstrap.git",
-                "reference": "ed686e60f966ba415e34f8825fad454993afac4b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/components/bootstrap/zipball/ed686e60f966ba415e34f8825fad454993afac4b",
-                "reference": "ed686e60f966ba415e34f8825fad454993afac4b",
-                "shasum": ""
-            },
-            "require": {
-                "components/jquery": ">=1.9"
-            },
-            "suggest": {
-                "components/bootstrap-default": "Provide a theme for Bootstrap as components/bootstrap only provides the CSS as file assets"
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "js/bootstrap.js"
-                    ],
-                    "files": [
-                        "js/bootstrap.min.js",
-                        "css/*.css",
-                        "fonts/*",
-                        "less/*"
-                    ],
-                    "shim": {
-                        "deps": [
-                            "jquery"
-                        ]
-                    }
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Twitter, Inc"
-                }
-            ],
-            "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development.",
-            "homepage": "http://twitter.github.com/bootstrap/",
-            "keywords": [
-                "bootstrap",
-                "css"
-            ],
-            "time": "2013-12-08 11:53:27"
-        },
-        {
-            "name": "components/jquery",
-            "version": "1.11.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/components/jquery.git",
-                "reference": "c20fd94f83db26dfdce5f37ce5d6cbe0e907a05b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/components/jquery/zipball/c20fd94f83db26dfdce5f37ce5d6cbe0e907a05b",
-                "reference": "c20fd94f83db26dfdce5f37ce5d6cbe0e907a05b",
-                "shasum": ""
-            },
-            "require": {
-                "robloach/component-installer": "*"
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "jquery.js"
-                    ],
-                    "files": [
-                        "jquery.min.js",
-                        "jquery-migrate.js",
-                        "jquery-migrate.min.js"
-                    ]
+                    "dev-master": "1.0.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -233,33 +116,186 @@
             ],
             "authors": [
                 {
-                    "name": "John Resig",
-                    "email": "jeresig@gmail.com",
-                    "homepage": "http://ejohn.org/"
+                    "name": "Andrey F. Mindubaev",
+                    "email": "covex.mobile@gmail.com",
+                    "role": "Developer"
                 }
             ],
-            "description": "jQuery JavaScript Library",
-            "homepage": "http://jquery.com",
-            "time": "2014-01-24 21:17:36"
+            "description": "Bootstrap for AsseticImporter",
+            "time": "2014-04-21 19:05:55"
+        },
+        {
+            "name": "apnet/html5shiv",
+            "version": "3.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/apnet/html5shiv.git",
+                "reference": "27603ad0c6e9aa94c26c6adeaae8fa8581a0f179"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/apnet/html5shiv/zipball/27603ad0c6e9aa94c26c6adeaae8fa8581a0f179",
+                "reference": "27603ad0c6e9aa94c26c6adeaae8fa8581a0f179",
+                "shasum": ""
+            },
+            "require": {
+                "apnet/assetic-importer-bundle": "~1.1",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "afarkas/html5shiv": "~3.7,<4.0",
+                "apnet/coding-standard": "~1.0",
+                "apnet/functional-test-bundle": "~1.1,>=1.1.3",
+                "knplabs/knp-markdown-bundle": "~1.3",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~1.5",
+                "symfony/monolog-bundle": "~2.3",
+                "symfony/symfony": "~2.3"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.7.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Apnet\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey F. Mindubaev",
+                    "email": "covex.mobile@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Html5Shiv for AsseticImporter",
+            "time": "2014-04-21 12:22:09"
+        },
+        {
+            "name": "apnet/jquery",
+            "version": "1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/apnet/jquery.git",
+                "reference": "1c850f447b86e573b95202c16ae9c62c874c3fad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/apnet/jquery/zipball/1c850f447b86e573b95202c16ae9c62c874c3fad",
+                "reference": "1c850f447b86e573b95202c16ae9c62c874c3fad",
+                "shasum": ""
+            },
+            "require": {
+                "apnet/assetic-importer-bundle": "~1.1",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "apnet/coding-standard": "~1.0",
+                "apnet/functional-test-bundle": "~1.1,>=1.1.3",
+                "jquery/jquery-source": "~1.11",
+                "knplabs/knp-markdown-bundle": "~1.3",
+                "phpunit/phpunit": "~4.0",
+                "sensio/generator-bundle": "~2.3",
+                "squizlabs/php_codesniffer": "~1.5",
+                "symfony/monolog-bundle": "~2.3",
+                "symfony/symfony": "~2.3"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Apnet\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey F. Mindubaev",
+                    "email": "covex.mobile@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Symfony2 Bundle Skel",
+            "time": "2014-04-21 09:42:29"
+        },
+        {
+            "name": "apnet/layout-bundle",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/apnet/LayoutBundle.git",
+                "reference": "0154e260975201751000a996c2030edfdc618250"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/apnet/LayoutBundle/zipball/0154e260975201751000a996c2030edfdc618250",
+                "reference": "0154e260975201751000a996c2030edfdc618250",
+                "shasum": ""
+            },
+            "require": {
+                "apnet/bootstrap": "~3.1,<4.0",
+                "apnet/html5shiv": "~3.7,<4.0",
+                "apnet/jquery": "~1.11,<2.0",
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "~2.3"
+            },
+            "require-dev": {
+                "apnet/coding-standard": "~1.0",
+                "apnet/functional-test-bundle": "~1.1,>=1.1.3",
+                "knplabs/knp-markdown-bundle": "~1.3",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~1.5",
+                "symfony/monolog-bundle": "~2.3",
+                "symfony/symfony": "~2.3"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "symfony-app-dir": "app",
+                "symfony-web-dir": "web",
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Apnet\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Default layout for all sites",
+            "time": "2014-04-22 18:26:58"
         },
         {
             "name": "covex-nn/doctrine-migrations-bundle",
-            "version": "dev-master",
+            "version": "0.9.1",
             "target-dir": "Doctrine/Bundle/MigrationsBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/covex-nn/DoctrineMigrationsBundle.git",
-                "reference": "40a8f87d3f2cc2e7d66cfe52eff7e8a519f4cd6c"
+                "reference": "bb908414a5b4cc3394516b3310030558043034ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/covex-nn/DoctrineMigrationsBundle/zipball/40a8f87d3f2cc2e7d66cfe52eff7e8a519f4cd6c",
-                "reference": "40a8f87d3f2cc2e7d66cfe52eff7e8a519f4cd6c",
+                "url": "https://api.github.com/repos/covex-nn/DoctrineMigrationsBundle/zipball/bb908414a5b4cc3394516b3310030558043034ed",
+                "reference": "bb908414a5b4cc3394516b3310030558043034ed",
                 "shasum": ""
             },
             "require": {
+                "covex-nn/migrations": "~0.9,<1.0",
                 "doctrine/doctrine-bundle": "~1.0",
-                "doctrine/migrations": "~1.0@dev",
                 "php": ">=5.3.2",
                 "symfony/framework-bundle": "~2.1"
             },
@@ -281,7 +317,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Symfony Community",
@@ -299,7 +337,67 @@
                 "migrations",
                 "schema"
             ],
-            "time": "2013-11-08 18:42:29"
+            "time": "2014-04-25 17:45:40"
+        },
+        {
+            "name": "covex-nn/migrations",
+            "version": "0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/covex-nn/migrations.git",
+                "reference": "87ffe6c68b4c0643c9587fcb75d8264d5dd7cfe2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/covex-nn/migrations/zipball/87ffe6c68b4c0643c9587fcb75d8264d5dd7cfe2",
+                "reference": "87ffe6c68b4c0643c9587fcb75d8264d5dd7cfe2",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "~2.0",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "symfony/console": "2.*",
+                "symfony/yaml": "2.*"
+            },
+            "suggest": {
+                "symfony/console": "to run the migration from the console"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\DBAL\\Migrations": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                }
+            ],
+            "description": "Database Schema migrations using Doctrine DBAL",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "migrations"
+            ],
+            "time": "2014-04-25 16:55:23"
         },
         {
             "name": "doctrine/annotations",
@@ -957,66 +1055,6 @@
             "time": "2013-01-12 18:59:04"
         },
         {
-            "name": "doctrine/migrations",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/migrations.git",
-                "reference": "46a031ddaea47d0685200027cfe8c83b02aee6f6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/migrations/zipball/46a031ddaea47d0685200027cfe8c83b02aee6f6",
-                "reference": "46a031ddaea47d0685200027cfe8c83b02aee6f6",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/dbal": "~2.0",
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "symfony/console": "2.*",
-                "symfony/yaml": "2.*"
-            },
-            "suggest": {
-                "symfony/console": "to run the migration from the console"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Doctrine\\DBAL\\Migrations": "lib"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL"
-            ],
-            "authors": [
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": "Creator"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                }
-            ],
-            "description": "Database Schema migrations using Doctrine DBAL",
-            "homepage": "http://www.doctrine-project.org",
-            "keywords": [
-                "database",
-                "migrations"
-            ],
-            "time": "2014-03-16 19:02:43"
-        },
-        {
             "name": "doctrine/orm",
             "version": "v2.4.2",
             "source": {
@@ -1530,16 +1568,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.8.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "392ef35fd470638e08d0160d6b1cbab63cb23174"
+                "reference": "65026b610f8c19e61d7242f600530677b0466aac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/392ef35fd470638e08d0160d6b1cbab63cb23174",
-                "reference": "392ef35fd470638e08d0160d6b1cbab63cb23174",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/65026b610f8c19e61d7242f600530677b0466aac",
+                "reference": "65026b610f8c19e61d7242f600530677b0466aac",
                 "shasum": ""
             },
             "require": {
@@ -1567,7 +1605,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8.x-dev"
+                    "dev-master": "1.9.x-dev"
                 }
             },
             "autoload": {
@@ -1594,7 +1632,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2014-03-23 19:50:26"
+            "time": "2014-04-24 13:29:03"
         },
         {
             "name": "phpoption/phpoption",
@@ -1682,50 +1720,6 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
-        },
-        {
-            "name": "robloach/component-installer",
-            "version": "0.0.12",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RobLoach/component-installer.git",
-                "reference": "1864f25db21fc173e02a359f646acd596c1b0460"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RobLoach/component-installer/zipball/1864f25db21fc173e02a359f646acd596c1b0460",
-                "reference": "1864f25db21fc173e02a359f646acd596c1b0460",
-                "shasum": ""
-            },
-            "require": {
-                "kriswallsmith/assetic": "1.*",
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "composer/composer": "1.*"
-            },
-            "type": "composer-installer",
-            "extra": {
-                "class": "ComponentInstaller\\Installer"
-            },
-            "autoload": {
-                "psr-0": {
-                    "ComponentInstaller": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Rob Loach",
-                    "email": "robloach@gmail.com",
-                    "homepage": "http://robloach.net"
-                }
-            ],
-            "description": "Allows installation of Components via Composer.",
-            "time": "2013-08-31 23:46:48"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -4058,16 +4052,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "c5e6274b8f2bf983cf883bb375cf44f99aff200e"
+                "reference": "3697daa12ab57b2bfc27b734ab963142f27b9159"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/c5e6274b8f2bf983cf883bb375cf44f99aff200e",
-                "reference": "c5e6274b8f2bf983cf883bb375cf44f99aff200e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/3697daa12ab57b2bfc27b734ab963142f27b9159",
+                "reference": "3697daa12ab57b2bfc27b734ab963142f27b9159",
                 "shasum": ""
             },
             "require": {
@@ -4111,7 +4105,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2014-03-18 08:56:48"
+            "time": "2014-04-16 14:50:10"
         },
         {
             "name": "pimple/pimple",
@@ -5240,10 +5234,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "doctrine/migrations": 20,
-        "covex-nn/doctrine-migrations-bundle": 20
-    },
+    "stability-flags": [
+
+    ],
     "platform": {
         "php": ">=5.3.3"
     },
