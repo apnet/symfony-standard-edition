@@ -14,4 +14,8 @@ parameters:
     locale:            en
     secret:            1083dc7bfd20cc8c2bd10148631513ecf7
 
+    debug_toolbar:          true
+    debug_redirects:        false
+    use_assetic_controller: true
+
     assetic_watcher_enabled: %ASSETIC_WATCHER_ENABLED%
