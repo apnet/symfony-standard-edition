@@ -17,6 +17,7 @@
         <testsuite name="Project Test Suite">
             <directory>src/*/*Bundle/Tests</directory>
             <directory>src/*/Bundle/*Bundle/Tests</directory>
+            <directory>app/Tests</directory>
         </testsuite>
     </testsuites>
 
@@ -40,6 +41,10 @@
                 <directory>src/*/Bundle/*Bundle/Tests</directory>
             </exclude>
         </whitelist>
+        <blacklist>
+            <directory>app</directory>
+            <directory>vendor</directory>
+        </blacklist>
     </filter>
 
 </phpunit>
