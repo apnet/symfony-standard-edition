@@ -7,16 +7,16 @@
     "packages": [
         {
             "name": "apnet/assetic-importer-bundle",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/apnet/AsseticImporterBundle.git",
-                "reference": "0595b1f3f76f81e7e6dd7251d4c443644ef0916c"
+                "reference": "7559a1edc74972290aef1c2411693a294304dd49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apnet/AsseticImporterBundle/zipball/0595b1f3f76f81e7e6dd7251d4c443644ef0916c",
-                "reference": "0595b1f3f76f81e7e6dd7251d4c443644ef0916c",
+                "url": "https://api.github.com/repos/apnet/AsseticImporterBundle/zipball/7559a1edc74972290aef1c2411693a294304dd49",
+                "reference": "7559a1edc74972290aef1c2411693a294304dd49",
                 "shasum": ""
             },
             "require": {
@@ -29,6 +29,7 @@
                 "symfony/finder": "~2.3",
                 "symfony/http-kernel": "~2.3",
                 "symfony/process": "~2.3",
+                "symfony/twig-bundle": "~2.3",
                 "symfony/yaml": "~2.3",
                 "twig/twig": "~1.12"
             },
@@ -74,7 +75,7 @@
                 "sass",
                 "scss"
             ],
-            "time": "2014-04-25 14:32:37"
+            "time": "2014-04-26 19:22:54"
         },
         {
             "name": "apnet/bootstrap",
@@ -2838,7 +2839,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
