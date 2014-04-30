@@ -1,0 +1,18 @@
+parameters:
+    session.db_options:
+        db_table:    session
+        db_id_col:   session_id
+        db_data_col: session_value
+        db_time_col: session_time
+
+services:
+    session.dbal.default.wrapped_connection:
+        factory_service: doctrine.dbal.default_connection
+        factory_method: getWrappedConnection
+        class: PDO
+
+    session.handler.pdo:
+        class: Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler
+        arguments:
+            - @session.dbal.default.wrapped_connection
+            - %session.db_options%
