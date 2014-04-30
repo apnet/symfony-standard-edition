@@ -12,9 +12,9 @@ security:
     providers:
         in_memory:
             memory:
-                users:
-                    user:  { password: 58aa81b46cba1f51aeec67f94b9863e44820c2bf, roles: [ 'ROLE_USER' ] }
-                    admin: { password: 9c8009e40c482729fa0187afa4a08e39315cce23, roles: [ 'ROLE_ADMIN' ] }
+                users: { }
+#                    user:  { password: 58aa81b46cba1f51aeec67f94b9863e44820c2bf, roles: [ 'ROLE_USER' ] }
+#                    admin: { password: 9c8009e40c482729fa0187afa4a08e39315cce23, roles: [ 'ROLE_ADMIN' ] }
 
     firewalls:
         dev:
