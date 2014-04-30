@@ -13,7 +13,7 @@ class Version20130101000000 extends AbstractMigration
    */
   public function up(Schema $schema)
   {
-    // $this->addSql("SELECT 1");
+
   }
 
   /**
@@ -21,7 +21,7 @@ class Version20130101000000 extends AbstractMigration
    */
   public function down(Schema $schema)
   {
-    // $this->addSql("SELECT 1");
+
   }
 
 }
