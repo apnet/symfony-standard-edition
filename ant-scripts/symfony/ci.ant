@@ -32,12 +32,13 @@
         </concat>
 
         <replace file="${basedir}/app/config/parameters.yml">
-            <replacefilter token="``DATABASE_HOST``" value="${mysql.host}" />
-            <replacefilter token="``DATABASE_SCHEMA``" value="${mysql.schema}" />
-            <replacefilter token="``DATABASE_USER``" value="${mysql.user}" />
-            <replacefilter token="``DATABASE_PASSWORD``" value="${mysql.password}" />
-            <replacefilter token="``APP_SECRET``" value="${app.secret}" />
-            <replacefilter token="``ASSETIC_WATCHER_ENABLED``" value="${assetic_watcher.enabled}" />
+            <replacefilter token="[[DATABASE_DRIVER]]" value="pdo_mysql" />
+            <replacefilter token="[[DATABASE_HOST]]" value="${mysql.host}" />
+            <replacefilter token="[[DATABASE_SCHEMA]]" value="${mysql.schema}" />
+            <replacefilter token="[[DATABASE_USER]]" value="${mysql.user}" />
+            <replacefilter token="[[DATABASE_PASSWORD]]" value="${mysql.password}" />
+            <replacefilter token="[[APP_SECRET]]" value="${app.secret}" />
+            <replacefilter token="[[ASSETIC_WATCHER_ENABLED]]" value="${assetic_watcher.enabled}" />
         </replace>
     </target>
 
