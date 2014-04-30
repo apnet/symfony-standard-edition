@@ -1,20 +1,7 @@
 security:
-    encoders:
-        Symfony\Component\Security\Core\User\User:
-            algorithm:   sha1
-            iterations: 1
-            encode_as_base64: false
-
-    role_hierarchy:
-        ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
-
     providers:
         in_memory:
-            memory:
-                users: { }
-#                    user:  { password: 58aa81b46cba1f51aeec67f94b9863e44820c2bf, roles: [ 'ROLE_USER' ] }
-#                    admin: { password: 9c8009e40c482729fa0187afa4a08e39315cce23, roles: [ 'ROLE_ADMIN' ] }
+            memory: ~
 
     firewalls:
         dev:
