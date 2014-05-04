@@ -7,16 +7,16 @@
     "packages": [
         {
             "name": "apnet/assetic-importer-bundle",
-            "version": "1.1.2",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/apnet/AsseticImporterBundle.git",
-                "reference": "7559a1edc74972290aef1c2411693a294304dd49"
+                "reference": "f0c6fddef3dd5c854cf97b1e6f8b48246f3dc9f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apnet/AsseticImporterBundle/zipball/7559a1edc74972290aef1c2411693a294304dd49",
-                "reference": "7559a1edc74972290aef1c2411693a294304dd49",
+                "url": "https://api.github.com/repos/apnet/AsseticImporterBundle/zipball/f0c6fddef3dd5c854cf97b1e6f8b48246f3dc9f8",
+                "reference": "f0c6fddef3dd5c854cf97b1e6f8b48246f3dc9f8",
                 "shasum": ""
             },
             "require": {
@@ -34,7 +34,7 @@
                 "twig/twig": "~1.12"
             },
             "require-dev": {
-                "apnet/coding-standard": "~1.0",
+                "apnet/coding-standard": "~1.5",
                 "apnet/functional-test-bundle": "~1.1,>=1.1.3",
                 "knplabs/knp-markdown-bundle": "~1.3",
                 "phpunit/phpunit": "~4.0",
@@ -75,7 +75,7 @@
                 "sass",
                 "scss"
             ],
-            "time": "2014-04-26 19:22:54"
+            "time": "2014-04-29 11:59:13"
         },
         {
             "name": "apnet/bootstrap",
@@ -180,16 +180,16 @@
         },
         {
             "name": "apnet/jquery",
-            "version": "1.11.0",
+            "version": "1.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/apnet/jquery.git",
-                "reference": "1c850f447b86e573b95202c16ae9c62c874c3fad"
+                "reference": "55e5150de8657977b0c66db17cd4b62e0be9e081"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apnet/jquery/zipball/1c850f447b86e573b95202c16ae9c62c874c3fad",
-                "reference": "1c850f447b86e573b95202c16ae9c62c874c3fad",
+                "url": "https://api.github.com/repos/apnet/jquery/zipball/55e5150de8657977b0c66db17cd4b62e0be9e081",
+                "reference": "55e5150de8657977b0c66db17cd4b62e0be9e081",
                 "shasum": ""
             },
             "require": {
@@ -197,17 +197,17 @@
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "apnet/coding-standard": "~1.0",
-                "apnet/functional-test-bundle": "~1.1,>=1.1.3",
+                "apnet/coding-standard": "~1.5",
+                "apnet/functional-test-bundle": "~1.1,>=1.1.4",
+                "covex-nn/twig-callable-bridge-bundle": "~1.0",
                 "jquery/jquery-source": "~1.11",
                 "knplabs/knp-markdown-bundle": "~1.3",
                 "phpunit/phpunit": "~4.0",
-                "sensio/generator-bundle": "~2.3",
                 "squizlabs/php_codesniffer": "~1.5",
                 "symfony/monolog-bundle": "~2.3",
                 "symfony/symfony": "~2.3"
             },
-            "type": "symfony-bundle",
+            "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.x-dev"
@@ -229,8 +229,8 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Symfony2 Bundle Skel",
-            "time": "2014-04-21 09:42:29"
+            "description": "jQuery for AsseticImporter",
+            "time": "2014-05-04 06:31:11"
         },
         {
             "name": "apnet/layout-bundle",
@@ -281,17 +281,17 @@
         },
         {
             "name": "covex-nn/doctrine-migrations-bundle",
-            "version": "0.9.1",
+            "version": "0.9.2",
             "target-dir": "Doctrine/Bundle/MigrationsBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/covex-nn/DoctrineMigrationsBundle.git",
-                "reference": "bb908414a5b4cc3394516b3310030558043034ed"
+                "reference": "051eeb4fc834b365622c15b3ac59a542b2f8f340"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/covex-nn/DoctrineMigrationsBundle/zipball/bb908414a5b4cc3394516b3310030558043034ed",
-                "reference": "bb908414a5b4cc3394516b3310030558043034ed",
+                "url": "https://api.github.com/repos/covex-nn/DoctrineMigrationsBundle/zipball/051eeb4fc834b365622c15b3ac59a542b2f8f340",
+                "reference": "051eeb4fc834b365622c15b3ac59a542b2f8f340",
                 "shasum": ""
             },
             "require": {
@@ -338,7 +338,7 @@
                 "migrations",
                 "schema"
             ],
-            "time": "2014-04-25 17:45:40"
+            "time": "2014-04-29 08:11:43"
         },
         {
             "name": "covex-nn/migrations",
@@ -2142,16 +2142,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.3.12",
+            "version": "v2.3.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "3574df3d5e0039f3225007b8be534df5c4104503"
+                "reference": "9c4b11915d7409a9cecd155d954f2ade273f3359"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/3574df3d5e0039f3225007b8be534df5c4104503",
-                "reference": "3574df3d5e0039f3225007b8be534df5c4104503",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/9c4b11915d7409a9cecd155d954f2ade273f3359",
+                "reference": "9c4b11915d7409a9cecd155d954f2ade273f3359",
                 "shasum": ""
             },
             "require": {
@@ -2248,7 +2248,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-04-03 05:42:39"
+            "time": "2014-04-27 08:34:33"
         },
         {
             "name": "twig/extensions",
@@ -2358,20 +2358,20 @@
     "packages-dev": [
         {
             "name": "apnet/coding-standard",
-            "version": "1.0.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/apnet/coding-standard.git",
-                "reference": "ea47722dbdfb6d0ede93d8e580d4889518909d19"
+                "reference": "bb1d5b6c4b85e4af8d59f5b1c3f6c93513ec82e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apnet/coding-standard/zipball/ea47722dbdfb6d0ede93d8e580d4889518909d19",
-                "reference": "ea47722dbdfb6d0ede93d8e580d4889518909d19",
+                "url": "https://api.github.com/repos/apnet/coding-standard/zipball/bb1d5b6c4b85e4af8d59f5b1c3f6c93513ec82e7",
+                "reference": "bb1d5b6c4b85e4af8d59f5b1c3f6c93513ec82e7",
                 "shasum": ""
             },
             "require": {
-                "squizlabs/php_codesniffer": "~1.4"
+                "squizlabs/php_codesniffer": "~1.5,<2.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~3.7"
@@ -2379,7 +2379,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.x-dev"
                 }
             },
             "autoload": {
@@ -2392,20 +2392,20 @@
                 "MIT"
             ],
             "description": "Apnet PHP coding standard",
-            "time": "2013-11-27 20:06:51"
+            "time": "2014-04-28 15:43:56"
         },
         {
             "name": "apnet/functional-test-bundle",
-            "version": "1.1.3",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/apnet/FunctionalTestBundle.git",
-                "reference": "dbd306172a5262456ebb7048eb7e16e125b60c12"
+                "reference": "56d30302eafcde4a9ece02a568a7a78981b33ee0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apnet/FunctionalTestBundle/zipball/dbd306172a5262456ebb7048eb7e16e125b60c12",
-                "reference": "dbd306172a5262456ebb7048eb7e16e125b60c12",
+                "url": "https://api.github.com/repos/apnet/FunctionalTestBundle/zipball/56d30302eafcde4a9ece02a568a7a78981b33ee0",
+                "reference": "56d30302eafcde4a9ece02a568a7a78981b33ee0",
                 "shasum": ""
             },
             "require": {
@@ -2416,12 +2416,15 @@
                 "symfony/framework-bundle": "~2.3"
             },
             "require-dev": {
-                "apnet/coding-standard": "~1.0",
+                "apnet/coding-standard": "~1.5",
                 "doctrine/orm": "~2.2,>=2.2.3",
+                "knplabs/knp-markdown-bundle": "~1.3",
                 "phpunit/phpunit": "~4.0",
                 "squizlabs/php_codesniffer": "~1.5",
-                "symfony/monolog-bundle": "*",
-                "symfony/swiftmailer-bundle": "*"
+                "symfony/monolog-bundle": "~2.3",
+                "symfony/swiftmailer-bundle": "~2.3",
+                "symfony/symfony": "~2.3",
+                "symfony/twig-bundle": "~2.3"
             },
             "type": "library",
             "extra": {
@@ -2439,7 +2442,7 @@
                 "MIT"
             ],
             "description": "Apnet Functional test bundle",
-            "time": "2014-03-29 08:12:04"
+            "time": "2014-05-02 21:58:10"
         },
         {
             "name": "cilex/cilex",
@@ -3760,33 +3763,34 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.0.5",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "3dcca2120451b98a98fe60221ca279a184ee64db"
+                "reference": "bccecf50645068b44f49a84009e2a0499a500b99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/3dcca2120451b98a98fe60221ca279a184ee64db",
-                "reference": "3dcca2120451b98a98fe60221ca279a184ee64db",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/bccecf50645068b44f49a84009e2a0499a500b99",
+                "reference": "bccecf50645068b44f49a84009e2a0499a500b99",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
                 "phpunit/php-file-iterator": "~1.3.1",
-                "phpunit/php-text-template": "~1.2",
+                "phpunit/php-text-template": "~1.2.0",
                 "phpunit/php-token-stream": "~1.2.2",
-                "sebastian/environment": "~1.0",
+                "sebastian/environment": "~1.0.0",
                 "sebastian/version": "~1.0.3"
             },
             "require-dev": {
                 "ext-xdebug": ">=2.1.4",
-                "phpunit/phpunit": ">=4.0.0,<4.1.0"
+                "phpunit/phpunit": "~4.0.14"
             },
             "suggest": {
                 "ext-dom": "*",
-                "ext-xdebug": ">=2.2.1"
+                "ext-xdebug": ">=2.2.1",
+                "ext-xmlwriter": "*"
             },
             "type": "library",
             "extra": {
@@ -3820,7 +3824,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-03-28 10:54:55"
+            "time": "2014-04-30 09:01:21"
         },
         {
             "name": "phpunit/php-file-iterator",
