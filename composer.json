@@ -8,7 +8,7 @@
     },
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.3.*",
+        "symfony/symfony": "2.3.*,<2.3.14",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "1.2.*",
         "twig/extensions": "1.0.*",
@@ -41,8 +41,7 @@
     "config": {
         "bin-dir": "bin"
         ,
-        "preferred-install": "dist",
-        "component-dir": "web/components"
+        "preferred-install": "dist"
     },
     "minimum-stability": "stable",
     "extra": {
