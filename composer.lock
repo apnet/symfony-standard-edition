@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b00de38bbd941ec9d1f3ff0fd1eb0652",
+    "hash": "37ed6ac7147798cbc6595f03faeb6b39",
     "packages": [
         {
             "name": "apnet/assetic-importer-bundle",
@@ -1733,17 +1733,17 @@
         },
         {
             "name": "sensio/distribution-bundle",
-            "version": "dev-master",
+            "version": "v3.0.1",
             "target-dir": "Sensio/Bundle/DistributionBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "9e20df93f2d797851cb1caf18cc4f5c91171d769"
+                "reference": "e9caa300faf95076c8e27693f3fdb0bb6e3148c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/9e20df93f2d797851cb1caf18cc4f5c91171d769",
-                "reference": "9e20df93f2d797851cb1caf18cc4f5c91171d769",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/e9caa300faf95076c8e27693f3fdb0bb6e3148c0",
+                "reference": "e9caa300faf95076c8e27693f3fdb0bb6e3148c0",
                 "shasum": ""
             },
             "require": {
@@ -1788,7 +1788,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2014-06-29 09:44:03"
+            "time": "2014-06-06 02:53:20"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -2133,16 +2133,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "2.5.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "a22858ba57aafe048ec9825af2f6eadb2084f37c"
+                "reference": "ab3fb147440aa21aeb357a1638730f8a2ce850d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/a22858ba57aafe048ec9825af2f6eadb2084f37c",
-                "reference": "a22858ba57aafe048ec9825af2f6eadb2084f37c",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/ab3fb147440aa21aeb357a1638730f8a2ce850d9",
+                "reference": "ab3fb147440aa21aeb357a1638730f8a2ce850d9",
                 "shasum": ""
             },
             "require": {
@@ -2199,6 +2199,7 @@
             "require-dev": {
                 "doctrine/data-fixtures": "1.0.*",
                 "doctrine/dbal": "~2.2",
+                "doctrine/doctrine-bundle": "~1.2",
                 "doctrine/orm": "~2.2,>=2.2.3",
                 "egulias/email-validator": "1.1.0",
                 "ircmaxell/password-compat": "1.0.*",
@@ -2209,7 +2210,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5-dev"
+                    "dev-master": "2.6-dev"
                 }
             },
             "autoload": {
@@ -2245,7 +2246,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-07-01 06:40:40"
+            "time": "2014-07-01 06:41:10"
         },
         {
             "name": "twig/extensions",
@@ -5355,8 +5356,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "symfony/symfony": 20,
-        "sensio/distribution-bundle": 20
+        "symfony/symfony": 20
     },
     "platform": {
         "php": ">=5.3.3"
