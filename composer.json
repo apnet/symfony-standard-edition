@@ -40,8 +40,7 @@
     "config": {
         "bin-dir": "bin"
         ,
-        "preferred-install": "dist",
-        "component-dir": "web/components"
+        "preferred-install": "dist"
     },
     "extra": {
         "symfony-app-dir": "app",
