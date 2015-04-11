@@ -16,5 +16,9 @@ _apnet_layout_demo:
         _controller: FrameworkBundle:Template:template
         template: '::apnet-layout-demo.html.twig'
 
+_errors:
+    resource: "@TwigBundle/Resources/config/routing/errors.xml"
+    prefix:   /_error
+
 _main:
     resource: routing.yml
