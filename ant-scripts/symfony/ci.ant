@@ -32,6 +32,7 @@
         </concat>
 
         <replace file="${basedir}/app/config/parameters.yml">
+            <replacefilter token="[[DATABASE_DRIVER]]" value="pdo_mysql" />
             <replacefilter token="[[DATABASE_HOST]]" value="${mysql.host}" />
             <replacefilter token="[[DATABASE_SCHEMA]]" value="${mysql.schema}" />
             <replacefilter token="[[DATABASE_USER]]" value="${mysql.user}" />
