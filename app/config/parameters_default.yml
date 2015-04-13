@@ -1,5 +1,4 @@
 parameters:
-    database_driver:   [[DATABASE_DRIVER]]
     database_host:     [[DATABASE_HOST]]
     database_port:     null
     database_name:     [[DATABASE_SCHEMA]]
