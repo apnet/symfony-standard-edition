@@ -1,8 +1,2 @@
-_apnet_layout_demo:
-    path: /apnet-layout-demo.html
-    defaults:
-        _controller: FrameworkBundle:Template:template
-        template: '::apnet-layout-demo.html.twig'
-
 _main:
     resource: routing.yml
