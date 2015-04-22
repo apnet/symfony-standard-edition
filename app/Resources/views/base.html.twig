@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+{% extends "ApnetLayoutBundle::body.html.twig" %}
+
+{% block title %}Symfony2 Application{% endblock %}
+
+{% block stylesheets_core %}
+    {{ parent() }}
+    <style type="text/css">
+        @media (min-width: 979px) {
+            body { padding-top: 20px; padding-bottom: 20px; }
+        }
+    </style>
+{% endblock %}
+
+{% block body_wrapper %}<body role="document">{{ block('body') }}</body>{% endblock %}
