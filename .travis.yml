@@ -14,4 +14,4 @@ before_script:
 
 script:
    - ant -Dmysql.schema=symfony2 -Dmysql.host=127.0.0.1 -Dmysql.user=travis -Dmysql.password=travis -Dmysql.root.user=root -Dmysql.root.password= -Dsystem.composer=composer.phar -Dcomposer.dev=dev -Dapp.secret=ThisTokenIsNotSoSecretChangeIt
-   - ant -f build-dev.xml CI-phpunit
+   - ant -f build-dev.xml CI-build
