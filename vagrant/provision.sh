@@ -9,14 +9,6 @@ if [ -d /home/vagrant/share ]; then
 fi
 
 cd /vagrant
-if [ -f ./github-oauth.txt ]; then
-    GITHUB_OAUTH_TOKEN="$(cat github-oauth.txt)"
-
-    composer config --file=/home/vagrant/.composer/config.json github-oauth.github.com $GITHUB_OAUTH_TOKEN
-    chown vagrant:vagrant /home/vagrant/.composer/auth.json
-    composer config --global github-oauth.github.com $GITHUB_OAUTH_TOKEN
-fi
-
 if [ ! -f build.local.properties ]; then
     cp build.vagrant.properties build.local.properties
 fi

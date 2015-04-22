@@ -15,5 +15,5 @@
 /.sync
 /.composer
 /.vagrant
-/github-oauth.txt
+/auth.json
 /phpunit.xml
