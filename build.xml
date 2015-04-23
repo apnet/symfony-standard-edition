@@ -3,6 +3,7 @@
     <property file="build.local.properties" />
     <property file="build.properties" />
 
+    <import file="${lib.path.lint}/ci.ant" />
     <import file="${lib.path.mysql}/mysql.ant" />
     <import file="${lib.path.composer}/composer.ant" />
     <import file="${lib.path.symfony}/ci.ant" />

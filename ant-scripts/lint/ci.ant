@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <target name="phplint" unless="CI.no-phplint">
+        <apply executable="php" failonerror="true">
+            <arg value="-l" />
+
+            <fileset dir="${basedir}/app">
+                <include name="**/*.php" />
+                <exclude name="cache/**" />
+            </fileset>
+
+            <fileset dir="${basedir}/src">
+                <include name="**/*.php" />
+            </fileset>
+
+            <fileset dir="${basedir}/web">
+                <include name="**/*.php" />
+            </fileset>
+        </apply>
+    </target>
+</project>
