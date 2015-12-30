@@ -14,6 +14,10 @@
     stopOnFailure               = "false"
     bootstrap                   = "app/bootstrap.php.cache" >
 
+    <php>
+        <ini name="error_reporting" value="-1" />
+    </php>
+
     <testsuites>
         <testsuite name="Project Test Suite">
             <directory>src/*/*Bundle/Tests</directory>

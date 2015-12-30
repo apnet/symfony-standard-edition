@@ -7,8 +7,7 @@ parameters:
 
 services:
     session.dbal.default.wrapped_connection:
-        factory_service: doctrine.dbal.default_connection
-        factory_method: getWrappedConnection
+        factory: [@doctrine.dbal.default_connection, 'getWrappedConnection']
         class: PDO
 
     session.handler.pdo:
