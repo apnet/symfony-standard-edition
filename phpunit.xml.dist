@@ -12,7 +12,7 @@
     convertWarningsToExceptions = "true"
     processIsolation            = "false"
     stopOnFailure               = "false"
-    bootstrap                   = "app/bootstrap.php.cache" >
+    bootstrap                   = "app/autoload.php" >
 
     <php>
         <ini name="error_reporting" value="-1" />

@@ -6,7 +6,7 @@ use Apnet\FunctionalTestBundle\Framework\WebTestCase;
 
 class DefaultControllerTest extends WebTestCase
 {
-    public function testIndex()
+    public function testLegacyIndex()
     {
         $client = static::createClient();
 
