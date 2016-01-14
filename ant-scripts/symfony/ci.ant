@@ -12,6 +12,8 @@
 
         <sequential>
             <exec executable="php" dir="@{dir}" failonerror="@{failonerror}">
+                <arg value="-d" />
+                <arg value="xdebug.max_nesting_level=500" />
                 <arg value="app/console" />
                 <arg value="@{command}" />
                 <arg value="--env=@{env}" />

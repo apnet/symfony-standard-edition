@@ -13,7 +13,15 @@ class Version20131207133000 extends AbstractMigration
    */
   public function up(Schema $schema)
   {
-    $this->addSql("CREATE TABLE session (session_id varchar(255) NOT NULL, session_value text NOT NULL, session_time int(11) NOT NULL, PRIMARY KEY (session_id))");
+    $this->addSql(
+      "CREATE TABLE session (
+        session_id varchar(255) NOT NULL,
+        session_value text NOT NULL,
+        session_time int(11) NOT NULL,
+        session_lifetime int(11) NOT NULL,
+        PRIMARY KEY (session_id)
+      )"
+    );
   }
 
   /**
