@@ -15,5 +15,5 @@ before_script:
 
 script:
    - ant phplint
-   - ant -Dmysql.schema=symfony2 -Dmysql.host=127.0.0.1 -Dmysql.user=travis -Dmysql.password=travis -Dmysql.root.user=root -Dmysql.root.password= -Dsystem.composer=composer.phar -Dcomposer.dev=dev -Dapp.secret=ThisTokenIsNotSoSecretChangeIt
+   - ant -Dmysql.schema=symfony2 -Dmysql.host=127.0.0.1 -Dmysql.user=travis -Dmysql.password=travis -Dmysql.root.user=root -Dmysql.root.password= -Dsystem.composer=composer.phar -Dcomposer.dev=dev -Dapp.secret=ThisTokenIsNotSoSecretChangeIt -Dsymfony.env=test
    - ant -f build-dev.xml CI-build
