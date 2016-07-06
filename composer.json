@@ -40,9 +40,11 @@
         ]
     },
     "config": {
-        "bin-dir": "bin"
-        ,
-        "preferred-install": "dist"
+        "bin-dir": "bin",
+        "preferred-install": "dist",
+        "platform": {
+            "php": "5.3.9"
+        }
     },
     "minimum-stability" : "beta",
     "extra": {
