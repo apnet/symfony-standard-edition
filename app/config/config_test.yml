@@ -1,6 +1,12 @@
 imports:
     - { resource: config.yml }
+    - { resource: security.yml }
     - { resource: "@ApnetFunctionalTestBundle/Resources/config/config_test.yml" }
+
+security:
+    firewalls:
+        main:
+            http_basic: ~
 
 framework:
     router:

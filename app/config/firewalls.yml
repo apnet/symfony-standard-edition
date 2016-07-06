@@ -1,0 +1,17 @@
+security:
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            pattern: ^/
+            form_login:
+                provider: fos_userbundle
+                csrf_provider: security.csrf.token_manager
+            logout:
+                path:   /logout
+                target: /
+                invalidate_session: false
+            anonymous: ~
+            switch_user: true

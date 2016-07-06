@@ -1,0 +1,6 @@
+services:
+#    app.admin.something:
+#        class: AppBundle\Admin\SomethingAdmin
+#        arguments: [~, AppBundle\Entity\Something, ~]
+#        tags:
+#            - { name: sonata.admin, manager_type: orm, group: "..." }
