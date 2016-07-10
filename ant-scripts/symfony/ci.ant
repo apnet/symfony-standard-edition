@@ -14,7 +14,7 @@
             <exec executable="php" dir="@{dir}" failonerror="@{failonerror}">
                 <arg value="-d" />
                 <arg value="xdebug.max_nesting_level=500" />
-                <arg value="app/console" />
+                <arg value="bin/console" />
                 <arg value="@{command}" />
                 <arg value="--env=@{env}" />
                 <args />
@@ -45,15 +45,15 @@
     </target>
 
     <target name="symfony-deploy-chmod">
-        <chmod perm="777" dir="${basedir}/app/cache" />
-        <chmod perm="777" dir="${basedir}/app/logs" />
+        <chmod perm="777" dir="${basedir}/var/cache" />
+        <chmod perm="777" dir="${basedir}/var/logs" />
 
         <chmod perm="777" type="both">
-            <fileset dir="${basedir}/app/cache">
+            <fileset dir="${basedir}/var/cache">
                 <include name="**/*"/>
                 <exclude name=".gitkeep" />
             </fileset>
-            <fileset dir="${basedir}/app/logs">
+            <fileset dir="${basedir}/var/logs">
                 <include name="**/*"/>
                 <exclude name=".gitkeep" />
             </fileset>
@@ -62,10 +62,10 @@
 
     <target name="CI-deploy-symfony" depends="symfony-deploy-parameters" description="Run deploy scripts">
         <delete includeemptydirs="true" quiet="true">
-            <fileset dir="${basedir}/app/cache/${symfony.env}">
+            <fileset dir="${basedir}/var/cache/${symfony.env}">
                 <include name="**"/>
             </fileset>
-            <fileset dir="${basedir}/app/cache/${symfony.env}_old">
+            <fileset dir="${basedir}/var/cache/${symfony.env}_old">
                 <include name="**"/>
             </fileset>
         </delete>

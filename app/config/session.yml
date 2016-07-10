@@ -9,11 +9,11 @@ parameters:
 
 services:
     session.dbal.default.wrapped_connection:
-        factory: [@doctrine.dbal.default_connection, 'getWrappedConnection']
+        factory: [ "@doctrine.dbal.default_connection", 'getWrappedConnection']
         class: PDO
 
     session.handler.pdo:
         class: Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler
         arguments:
-            - @session.dbal.default.wrapped_connection
+            - "@session.dbal.default.wrapped_connection"
             - %session.db_options%

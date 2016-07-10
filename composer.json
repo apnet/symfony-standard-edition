@@ -7,37 +7,46 @@
         "psr-4": { "": "src/" },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
+    "autoload-dev": {
+        "psr-4": { "Tests\\": "tests/" }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/covex-nn/FOSUserBundle"
+        }
+    ],
     "require": {
         "php": ">=5.5.9",
-        "symfony/symfony": "2.8.*",
-        "doctrine/orm": "^2.4.8",
-        "doctrine/doctrine-bundle": "~1.4",
+        "symfony/symfony": "3.0.*",
+        "doctrine/orm": "^2.5",
+        "doctrine/doctrine-bundle": "^1.6",
+        "doctrine/doctrine-cache-bundle": "^1.2",
         "symfony/assetic-bundle": "~2.3",
-        "symfony/swiftmailer-bundle": "~2.3",
-        "symfony/monolog-bundle": "~2.4",
-        "sensio/distribution-bundle": "~5.0",
+        "symfony/swiftmailer-bundle": "^2.3",
+        "symfony/monolog-bundle": "^2.8",
+        "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
-        "sensio/generator-bundle": "~3.0",
         "doctrine/doctrine-fixtures-bundle": "~2.2",
-        "covex-nn/doctrine-migrations-bundle": "~0.9.1,<1.0",
-        "jms/security-extra-bundle": "~1.5",
+        "covex-nn/doctrine-migrations-bundle": "~0.9.3,<1.0",
+        "jms/security-extra-bundle": "~1.6",
         "apnet/assetic-importer-bundle": "~1.3",
         "apnet/layout-bundle": "~3.0",
-        "friendsofsymfony/user-bundle": "~1.3",
+        "friendsofsymfony/user-bundle": "1.3.x-dev",
         "friendsofsymfony/rest-bundle": "~1.7",
         "jms/serializer-bundle": "~1.1",
         "sonata-project/admin-bundle": "~3.0",
         "sonata-project/doctrine-orm-admin-bundle": "~3.0",
-        "sonata-project/user-bundle": "~3.0",
         "sonata-project/intl-bundle": "~2.2",
         "egeloen/ckeditor-bundle": "~4.0",
         "vich/uploader-bundle": "~1.0"
     },
     "require-dev": {
-        "covex-nn/phpqatools": "~1.4",
+        "covex-nn/phpqatools": "~2.0",
         "apnet/coding-standard": "~2.0",
-        "apnet/functional-test-bundle": "~1.0",
-        "symfony/phpunit-bridge": "~3.0"
+        "apnet/functional-test-bundle": "~1.2",
+        "sensio/generator-bundle": "^3.0",
+        "symfony/phpunit-bridge": "^3.0"
     },
     "scripts": {
         "post-install-cmd": [
@@ -49,19 +58,20 @@
         ]
     },
     "config": {
-        "bin-dir": "bin",
         "preferred-install": "dist",
         "platform": {
             "php": "5.5.9"
         }
     },
-    "minimum-stability" : "beta",
     "extra": {
         "symfony-app-dir": "app",
+        "symfony-bin-dir": "bin",
+        "symfony-var-dir": "var",
         "symfony-web-dir": "web",
+        "symfony-tests-dir": "tests",
         "symfony-assets-install": "relative",
         "branch-alias": {
-            "dev-master": "2.8-dev"
+            "dev-master": "3.0-dev"
         }
     }
 }

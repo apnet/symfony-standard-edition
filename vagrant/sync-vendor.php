@@ -14,7 +14,11 @@ if (file_exists($source) && is_dir($source)) {
   foreach (new DirectoryIterator($source) as $dir) {
     /* @var $dir DirectoryIterator */
     if (!$dir->isDot() && $dir->isDir()) {
-      $pharAlias = $dir->getFilename() . ".phar";
+      $pharName = $dir->getFilename();
+      if (in_array($pharName, ["bin"])) {
+        continue;
+      }
+      $pharAlias = $pharName . ".phar";
       $pharFilename = $target . "/" . $pharAlias;
 
       $phar = new Phar($pharFilename);

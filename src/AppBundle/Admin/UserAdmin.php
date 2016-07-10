@@ -20,8 +20,6 @@ class UserAdmin extends SonataUserAdmin
                     ->add('plainPassword', 'text', array(
                         'required' => (!$this->getSubject() || is_null($this->getSubject()->getId())),
                     ))
-                    ->add('firstname', null, array('required' => false))
-                    ->add('lastname', null, array('required' => false))
                 ->end()
             ->end()
             ->tab('Security')
