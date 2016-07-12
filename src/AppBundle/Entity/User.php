@@ -19,22 +19,11 @@ class User extends BaseUser
   protected $id;
 
   /**
-   * @return array
+   * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Group")
+   * @ORM\JoinTable(name="fos_user_user_group",
+   *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
+   *      inverseJoinColumns={@ORM\JoinColumn(name="group_id", referencedColumnName="id")}
+   * )
    */
-  public function getRealRoles()
-  {
-    return $this->roles;
-  }
-
-  /**
-   * @param array $roles
-   *
-   * @return User
-   */
-  public function setRealRoles(array $roles)
-  {
-    $this->setRoles($roles);
-
-    return $this;
-  }
+  protected $groups;
 }

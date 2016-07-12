@@ -20,12 +20,12 @@ class Group extends BaseGroup
     protected $id;
 
     /**
-     * Get id
+     * Represents a string representation.
      *
-     * @return int $id
+     * @return string
      */
-    public function getId()
+    public function __toString()
     {
-        return $this->id;
+        return $this->getName() ?: '';
     }
 }

@@ -1,6 +1,21 @@
 services:
-#    app.admin.something:
-#        class: AppBundle\Admin\SomethingAdmin
-#        arguments: [~, AppBundle\Entity\Something, ~]
-#        tags:
-#            - { name: sonata.admin, manager_type: orm, group: "..." }
+    app.form.type.roles:
+        class: AppBundle\Form\Type\RolesType
+        calls:
+            - [ "setRoleHierarchy", [ %security.role_hierarchy.roles% ] ]
+        tags:
+            - { name: form.type }
+
+    app.admin.user:
+        class: AppBundle\Admin\UserAdmin
+        arguments: [~, AppBundle\Entity\User, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: "Users", group: "Users" }
+        calls:
+            - [ "setUserManager", [ "@fos_user.user_manager" ] ]
+
+    app.admin.group:
+        class: AppBundle\Admin\GroupAdmin
+        arguments: [~, AppBundle\Entity\Group, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: "Groups", group: "Users" }
