@@ -56,29 +56,29 @@ class UserAdmin extends AbstractAdmin
     {
         $formMapper
             ->tab('User')
-                ->with('General')
-                    ->add('username')
-                    ->add('email')
-                    ->add('plainPassword', TextType::class, array(
-                        'required' => (!$this->getSubject() || is_null($this->getSubject()->getId())),
-                    ))
-                ->end()
+            ->with('General')
+            ->add('username')
+            ->add('email')
+            ->add('plainPassword', TextType::class, array(
+                'required' => (!$this->getSubject() || is_null($this->getSubject()->getId())),
+            ))
+            ->end()
             ->end()
             ->tab('Security')
-                ->with('Status')
-                    ->add('locked', null, array('required' => false))
-                    ->add('expired', null, array('required' => false))
-                    ->add('enabled', null, array('required' => false))
-                    ->add('credentialsExpired', null, array('required' => false))
-                ->end()
-                ->with('Roles')
-                    ->add('roles', RolesType::class)
-                    ->add('groups', ModelType::class, array(
-                        'required' => false,
-                        'expanded' => true,
-                        'multiple' => true,
-                    ))
-                ->end()
+            ->with('Status')
+            ->add('locked', null, array('required' => false))
+            ->add('expired', null, array('required' => false))
+            ->add('enabled', null, array('required' => false))
+            ->add('credentialsExpired', null, array('required' => false))
+            ->end()
+            ->with('Roles')
+            ->add('roles', RolesType::class)
+            ->add('groups', ModelType::class, array(
+                'required' => false,
+                'expanded' => true,
+                'multiple' => true,
+            ))
+            ->end()
             ->end();
     }
 
@@ -103,7 +103,7 @@ class UserAdmin extends AbstractAdmin
     /**
      * Set user manager
      *
-     * @param UserManagerInterface $userManager
+     * @param UserManagerInterface $userManager User manager
      *
      * @return $this
      */

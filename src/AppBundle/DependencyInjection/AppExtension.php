@@ -15,24 +15,25 @@ use Symfony\Component\DependencyInjection\Loader;
 class AppExtension extends Extension
 {
 
-  /**
-   * Loads a specific configuration.
-   *
-   * @param array            $configs   An array of configuration values
-   * @param ContainerBuilder $container A ContainerBuilder instance
-   *
-   * @return null
-   */
-  public function load(array $configs, ContainerBuilder $container)
-  {
-    $configuration = new Configuration();
-    /* $config = */$this->processConfiguration($configuration, $configs);
+    /**
+     * Loads a specific configuration.
+     *
+     * @param array            $configs   An array of configuration values
+     * @param ContainerBuilder $container A ContainerBuilder instance
+     *
+     * @return null
+     */
+    public function load(array $configs, ContainerBuilder $container)
+    {
+        $configuration = new Configuration();
+        /* $config = */
+        $this->processConfiguration($configuration, $configs);
 
-    $loader = new Loader\YamlFileLoader(
-      $container,
-      new FileLocator(__DIR__ . '/../Resources/config')
-    );
-    $loader->load('services.yml');
-    $loader->load('admin.yml');
-  }
+        $loader = new Loader\YamlFileLoader(
+            $container,
+            new FileLocator(__DIR__ . '/../Resources/config')
+        );
+        $loader->load('services.yml');
+        $loader->load('admin.yml');
+    }
 }

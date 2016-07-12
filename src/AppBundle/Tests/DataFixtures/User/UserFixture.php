@@ -11,65 +11,51 @@ use AppBundle\Entity\User;
  */
 abstract class UserFixture extends SingleObjectFixture implements OrderedFixtureInterface
 {
+    /**
+     * @var string
+     */
+    public $username;
 
-  /**
-   * @var string
-   */
-  public $username;
+    /**
+     * @var string
+     */
+    public $email;
 
-  /**
-   * @var string
-   */
-  public $email;
+    /**
+     * @var string
+     */
+    public $password = "qwerty";
 
-  /**
-   * @var string
-   */
-  public $password = "qwerty";
+    /**
+     * @var array
+     */
+    public $roles = ['ROLE_USER'];
 
-  /**
-   * @var string
-   */
-  public $firstname;
+    /**
+     * Create User object
+     *
+     * @return User
+     */
+    public function createObject()
+    {
+        $object = new User();
 
-  /**
-   * @var string
-   */
-  public $lastname;
+        $object->setUsername($this->username);
+        $object->setEmail($this->email);
+        $object->setPlainPassword($this->password);
+        $object->setRoles($this->roles);
 
-  /**
-   * @var array
-   */
-  public $roles = [ 'ROLE_USER' ];
+        $object->setLocked(false);
+        $object->setEnabled(true);
 
-  /**
-   * Create User object
-   *
-   * @return User
-   */
-  public function createObject()
-  {
-    $object = new User();
+        return $object;
+    }
 
-    $object->setUsername($this->username);
-    $object->setEmail($this->email);
-    $object->setPlainPassword($this->password);
-    $object->setRoles($this->roles);
-
-    $object->setFirstname($this->firstname);
-    $object->setLastname($this->lastname);
-
-    $object->setLocked(false);
-    $object->setEnabled(true);
-
-    return $object;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getOrder()
-  {
-    return 106000;
-  }
+    /**
+     * {@inheritdoc}
+     */
+    public function getOrder()
+    {
+        return 106000;
+    }
 }
