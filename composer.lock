@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "754073ebbaad66562464cb433370042d",
-    "content-hash": "df260416a5a7d8bd585cd0a3184d14c4",
+    "hash": "24f8588662de06d5531fbb5ce2b931e7",
+    "content-hash": "f1590e47a65ea88351aea1dc97e2a994",
     "packages": [
         {
             "name": "apnet/assetic-importer-bundle",
@@ -1541,17 +1541,17 @@
         },
         {
             "name": "friendsofsymfony/user-bundle",
-            "version": "1.3.x-dev",
+            "version": "1.3.7",
             "target-dir": "FOS/UserBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/covex-nn/FOSUserBundle.git",
-                "reference": "c3d9234fa2834f7ae7e8ee6a300823e9ff3785d8"
+                "reference": "f3eadd1b0a84838a13805d102ada773862891555"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/covex-nn/FOSUserBundle/zipball/c3d9234fa2834f7ae7e8ee6a300823e9ff3785d8",
-                "reference": "c3d9234fa2834f7ae7e8ee6a300823e9ff3785d8",
+                "url": "https://api.github.com/repos/covex-nn/FOSUserBundle/zipball/f3eadd1b0a84838a13805d102ada773862891555",
+                "reference": "f3eadd1b0a84838a13805d102ada773862891555",
                 "shasum": ""
             },
             "require": {
@@ -1607,9 +1607,9 @@
             ],
             "support": {
                 "docs": "https://symfony.com/doc/1.3.x/bundles/FOSUserBundle/index.html",
-                "source": "https://github.com/covex-nn/FOSUserBundle/tree/1.3.x"
+                "source": "https://github.com/covex-nn/FOSUserBundle/tree/1.3.7"
             },
-            "time": "2016-07-12 09:23:21"
+            "time": "2016-07-12 12:31:08"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -4795,9 +4795,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "friendsofsymfony/user-bundle": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
