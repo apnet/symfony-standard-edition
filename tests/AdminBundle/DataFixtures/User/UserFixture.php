@@ -4,7 +4,7 @@ namespace Tests\AdminBundle\DataFixtures\User;
 
 use Apnet\FunctionalTestBundle\Framework\DataFixtures\SingleObjectFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
-use AppBundle\Entity\User;
+use AdminBundle\Entity\User;
 
 /**
  * Abstract parent class for Uset fixtures
