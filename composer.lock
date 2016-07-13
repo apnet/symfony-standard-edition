@@ -4675,16 +4675,16 @@
         },
         {
             "name": "covex-nn/phpqatools",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/covex-nn/phpqatools.git",
-                "reference": "0345eee4ae34782f354080af6e10cf2de9395173"
+                "reference": "f258aedd26e0091f1ddb3f1e4836662e58f28a9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/covex-nn/phpqatools/zipball/0345eee4ae34782f354080af6e10cf2de9395173",
-                "reference": "0345eee4ae34782f354080af6e10cf2de9395173",
+                "url": "https://api.github.com/repos/covex-nn/phpqatools/zipball/f258aedd26e0091f1ddb3f1e4836662e58f28a9e",
+                "reference": "f258aedd26e0091f1ddb3f1e4836662e58f28a9e",
                 "shasum": ""
             },
             "require": {
@@ -4709,7 +4709,7 @@
                 "MIT"
             ],
             "description": "Composer package for PHP QA Tools",
-            "time": "2016-07-09 20:56:28"
+            "time": "2016-07-13 13:52:23"
         },
         {
             "name": "sensio/generator-bundle",
