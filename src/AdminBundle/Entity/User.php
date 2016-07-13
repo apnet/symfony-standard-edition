@@ -1,12 +1,12 @@
 <?php
 
-namespace AppBundle\Entity;
+namespace AdminBundle\Entity;
 
 use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
+ * @ORM\Entity(repositoryClass="AdminBundle\Repository\UserRepository")
  * @ORM\Table(name="fos_user")
  */
 class User extends BaseUser
@@ -19,7 +19,7 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Group")
+     * @ORM\ManyToMany(targetEntity="AdminBundle\Entity\Group")
      * @ORM\JoinTable(name="fos_user_user_group",
      *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="group_id", referencedColumnName="id")}

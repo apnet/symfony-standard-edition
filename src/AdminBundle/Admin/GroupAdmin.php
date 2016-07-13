@@ -1,9 +1,9 @@
 <?php
 
-namespace AppBundle\Admin;
+namespace AdminBundle\Admin;
 
-use AppBundle\Entity\Group;
-use AppBundle\Form\Type\RolesType;
+use AdminBundle\Entity\Group;
+use AdminBundle\Form\Type\RolesType;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
@@ -14,6 +14,11 @@ use Sonata\AdminBundle\Form\FormMapper;
  */
 class GroupAdmin extends AbstractAdmin
 {
+    /**
+     * @var string
+     */
+    protected $translationDomain = "app_admin";
+
     /**
      * {@inheritdoc}
      */
@@ -31,7 +36,9 @@ class GroupAdmin extends AbstractAdmin
     {
         $listMapper
             ->addIdentifier('name')
-            ->add('roles', 'user_roles');
+            ->add('roles', null, array(
+                'template' => 'AdminBundle:Admin/CRUD:roles_list_field.html.twig'
+            ));
     }
 
     /**
@@ -50,7 +57,9 @@ class GroupAdmin extends AbstractAdmin
     {
         $formMapper
             ->add('name')
-            ->add('roles', RolesType::class, array('required' => false));
+            ->add('roles', RolesType::class, array(
+                'required' => false
+            ));
     }
 
     /**

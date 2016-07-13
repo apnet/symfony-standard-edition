@@ -1,9 +1,9 @@
 <?php
 
-namespace AppBundle\Admin;
+namespace AdminBundle\Admin;
 
-use AppBundle\Entity\User;
-use AppBundle\Form\Type\RolesType;
+use AdminBundle\Entity\User;
+use AdminBundle\Form\Type\RolesType;
 use FOS\UserBundle\Model\UserManagerInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
@@ -17,6 +17,11 @@ use Sonata\AdminBundle\Form\Type\ModelType;
  */
 class UserAdmin extends AbstractAdmin
 {
+    /**
+     * @var string
+     */
+    protected $translationDomain = "app_admin";
+
     /**
      * @var UserManagerInterface
      */
@@ -55,8 +60,8 @@ class UserAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->tab('User')
-            ->with('General')
+            ->tab('tab.user')
+            ->with('group.general')
             ->add('username')
             ->add('email')
             ->add('plainPassword', TextType::class, array(
@@ -64,14 +69,14 @@ class UserAdmin extends AbstractAdmin
             ))
             ->end()
             ->end()
-            ->tab('Security')
-            ->with('Status')
+            ->tab('tab.security')
+            ->with('group.status')
             ->add('locked', null, array('required' => false))
             ->add('expired', null, array('required' => false))
             ->add('enabled', null, array('required' => false))
             ->add('credentialsExpired', null, array('required' => false))
             ->end()
-            ->with('Roles')
+            ->with('group.roles')
             ->add('roles', RolesType::class)
             ->add('groups', ModelType::class, array(
                 'required' => false,

@@ -39,6 +39,7 @@ class AppKernel extends Kernel
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
 
             new AppBundle\AppBundle(),
+            new AdminBundle\AdminBundle(),
         ];
 
         switch ($this->getEnvironment()) {

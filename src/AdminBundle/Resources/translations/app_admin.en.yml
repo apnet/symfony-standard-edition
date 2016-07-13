@@ -1,0 +1,38 @@
+filter.label_groups: Groups
+filter.label_email: Email
+filter.label_locked: Locked
+filter.label_name: Name
+filter.label_username: Username
+
+form.label_credentials_expired: Credentials expired
+form.label_email: Email
+form.label_enabled: Enabled
+form.label_expired: Expired
+form.label_groups: Groups
+form.label_locked: Locked
+form.label_name: Name
+form.label_plain_password: Password
+form.label_roles: Roles
+form.label_username: Username
+
+list.label_email: Email
+list.label_enabled: Enabled
+list.label_groups: Groups
+list.label_locked: Locked
+list.label_name: Name
+list.label_roles: Roles
+list.label_username: Username
+
+breadcrumb.link_group_create: Create Group
+breadcrumb.link_group_list: Groups List
+breadcrumb.link_user_create: Create User
+breadcrumb.link_user_list: Users List
+
+users.group: Users
+users.admin: Users
+groups.admin: Groups
+tab.user: User
+tab.security: Security
+group.general: General
+group.status: Status
+group.roles: Roles

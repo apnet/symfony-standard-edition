@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Tests\DataFixtures\User;
+namespace Tests\AdminBundle\DataFixtures\User;
 
 use Apnet\FunctionalTestBundle\Framework\DataFixtures\SingleObjectFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;

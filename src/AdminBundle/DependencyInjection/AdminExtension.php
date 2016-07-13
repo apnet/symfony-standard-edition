@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\DependencyInjection;
+namespace AdminBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * @link http://symfony.com/doc/current/cookbook/bundles/extension.html
  */
-class AppExtension extends Extension
+class AdminExtension extends Extension
 {
 
     /**
@@ -33,5 +33,6 @@ class AppExtension extends Extension
             new FileLocator(__DIR__ . '/../Resources/config')
         );
         $loader->load('services.yml');
+        $loader->load('admin.yml');
     }
 }

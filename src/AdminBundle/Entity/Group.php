@@ -1,12 +1,12 @@
 <?php
 
-namespace AppBundle\Entity;
+namespace AdminBundle\Entity;
 
 use FOS\UserBundle\Entity\Group as BaseGroup;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="AppBundle\Repository\GroupRepository")
+ * @ORM\Entity(repositoryClass="AdminBundle\Repository\GroupRepository")
  * @ORM\Table(name="fos_group")
  */
 class Group extends BaseGroup

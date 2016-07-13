@@ -4,7 +4,7 @@ namespace Tests\AppBundle\Controller;
 
 use Apnet\FunctionalTestBundle\Framework\WebTestCase;
 use Apnet\FunctionalTestBundle\Framework\Client;
-use AppBundle\Tests\DataFixtures;
+use Tests\AdminBundle\DataFixtures;
 
 /**
  * Class DefaultControllerTest
@@ -31,7 +31,7 @@ class DefaultControllerTest extends WebTestCase
     protected static function setDefaultClientUp(Client $client)
     {
         parent::setDefaultClientUp($client);
-        /*
+
         $client->loadFixtures(
             array(
                 new DataFixtures\User\Andrey(),
@@ -44,6 +44,5 @@ class DefaultControllerTest extends WebTestCase
                 'PHP_AUTH_PW' => 'qwerty'
             )
         );
-        */
     }
 }

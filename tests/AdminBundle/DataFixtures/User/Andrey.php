@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Tests\DataFixtures\User;
+namespace Tests\AdminBundle\DataFixtures\User;
 
 /**
  * Andrey user
