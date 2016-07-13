@@ -71,6 +71,10 @@ It comes pre-configured with the following bundles:
 
   * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
     integration
+    
+  * [**PHPQaTools**](https://github.com/covex-nn/phpqatools) (in dev/test env)
+  
+  * [**ApnetFunctionalTestBundle**](https://github.com/apnet/FunctionalTestBundle) (in dev/test env)
 
 All libraries and bundles included in the Symfony Apnet Edition are
 released under the MIT or BSD license.
